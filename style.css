@@ -28,7 +28,8 @@ a {
 }
 
 a:hover {
-  color: #333;
+  text-decoration: none;
+  color: #f72210;
 }
 
 /*
@@ -47,9 +48,17 @@ a:hover {
       ==============================================
  */
 
+header {
+  width: 100%;
+}
+
+.top-nav {
+  width: 100%;
+}
+
 .newsweek-icon {
   filter: invert(1);
-  width: 396px;
+  width: 132px;
 }
 
 .weather-icon {
@@ -67,8 +76,22 @@ a:hover {
   border: none;
 }
 
-.special-border {
+/* .special-border {
   margin-right: 22px;
   padding-right: 22px;
   border-right: solid 1px #aaa;
+} */
+
+.bot-nav li {
+  display: flex;
+}
+
+.bot-nav a {
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .newsweek-icon {
+    width: 396px;
+  }
 }
