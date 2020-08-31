@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Roboto Condensed", serif;
+}
+
 ul {
   list-style: none;
 }
@@ -32,3 +36,39 @@ a:hover {
                   ****** GLOBAL ******
       ==============================================
  */
+
+.bg-red {
+  background-color: #f72210;
+}
+
+/*
+      ==============================================
+                  ****** HEADER ******
+      ==============================================
+ */
+
+.newsweek-icon {
+  filter: invert(1);
+  width: 396px;
+}
+
+.weather-icon {
+  width: 24px;
+}
+
+.subscribe-btn {
+  background-color: #ffe400;
+  padding: 2px 16px;
+  border: none;
+}
+
+.login-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.special-border {
+  margin-right: 22px;
+  padding-right: 22px;
+  border-right: solid 1px #aaa;
+}
