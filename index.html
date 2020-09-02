@@ -28,7 +28,7 @@
     <header class="container-fluid">
       <div class="row">
         <nav
-          class="top-nav navbar d-print bg-red px-4 pt-4 pb-3 justify-content-between"
+          class="top-nav navbar bg-red py-3 py-md-3 py-sm-3 py-lg-4 pt-lg-4 pb-lg-3 justify-content-between"
         >
           <div class="d-none d-lg-block">
             <div class="text-white mb-2">
@@ -61,118 +61,104 @@
               ></path>
             </g>
           </svg>
-          <div class="d-flex align-items-center mt-4">
+          <div class="d-flex align-items-center mt-lg-4">
             <button
-              class="login-btn text-uppercase text-white font-weight-bold pr-4"
+              class="login-btn text-uppercase text-white font-weight-bold pr-4 d-none d-md-block"
             >
               login
             </button>
-            <button
-              class="subscribe-btn btn rounded-pill text-uppercase font-weight-bold"
-            >
-              subscribe <i class="fas fa-chevron-right"></i>
-            </button>
+            <div class="d-flex align-items-center">
+              <i class="fas fa-user fa-md pr-2 pr-sm-3 d-block d-md-none"></i>
+              <button
+                class="subscribe-btn btn rounded-pill text-uppercase font-weight-bold"
+              >
+                subscribe <i class="fas fa-chevron-right"></i>
+              </button>
+
+              <i
+                class="pl-md-3 pl-sm-3 d-none d-block d-sm-block d-md-block d-lg-none pl-2 fa fa-bars fa-md"
+                aria-hidden="true"
+              ></i>
+            </div>
           </div>
         </nav>
       </div>
       <div class="d-none d-lg-block">
         <nav class="mid-nav mt-3">
-          <ul
-            class="d-flex justify-content-between align-content-center mb-2 p-0"
-          >
-            <li class="">
-              <a
-                class="h5 text-dark font-weight-bold pl-2 pr-4 border-right"
-                href="#"
+          <ul class="p-0 d-flex justify-content-between">
+            <li class="text-nowrap text-center">
+              <a class="text-dark font-weight-bold pr-4 border-right" href="#"
                 >U.S.</a
               >
             </li>
-            <li>
-              <a
-                class="h5 text-dark font-weight-bold pr-4 border-right"
-                href="#"
+            <li class="text-nowrap text-center">
+              <a class="text-dark font-weight-bold pr-4 border-right" href="#"
                 >World</a
               >
             </li>
-            <li>
-              <a
-                class="h5 text-dark font-weight-bold pr-4 border-right"
-                href="#"
+            <li class="text-nowrap text-center">
+              <a class="text-dark font-weight-bold pr-4 border-right" href="#"
                 >Business</a
               >
             </li>
-            <li>
-              <a
-                class="h5 text-dark font-weight-bold pr-4 text-nowrap border-right"
-                href="#"
+            <li class="text-nowrap text-nowrap text-center">
+              <a class="text-dark font-weight-bold pr-4 border-right" href="#"
                 >Tech & Science</a
               >
             </li>
-            <li>
-              <a
-                class="h5 text-dark font-weight-bold pr-4 border-right"
-                href="#"
+            <li class="text-nowrap text-center">
+              <a class="text-dark font-weight-bold pr-4 border-right" href="#"
                 >Culture</a
               >
             </li>
-            <li>
-              <a
-                class="h5 text-dark font-weight-bold pr-4 border-right"
-                href="#"
+            <li class="text-nowrap text-center">
+              <a class="text-dark font-weight-bold pr-4 border-right" href="#"
                 >Newsgeek</a
               >
             </li>
-            <li>
-              <a
-                class="h5 text-dark font-weight-bold pr-4 border-right"
-                href="#"
+            <li class="text-nowrap text-center">
+              <a class="text-dark font-weight-bold pr-4 border-right" href="#"
                 >Sports</a
               >
             </li>
-            <li>
-              <a
-                class="h5 text-dark font-weight-bold pr-3 border-right"
-                href="#"
+            <li class="text-nowrap text-center">
+              <a class="text-dark font-weight-bold pr-4 border-right" href="#"
                 >Health</a
               >
             </li>
-            <li>
-              <a
-                class="h5 text-dark font-weight-bold pr-3 text-nowrap border-right"
-                href="#"
+            <li class="text-nowrap text-center">
+              <a class="text-dark font-weight-bold pr-4 border-right" href="#"
                 >The Debate</a
               >
             </li>
-            <li>
-              <a
-                class="h5 text-dark font-weight-bold pr-3 border-right"
-                href="#"
+            <li class="text-nowrap text-center">
+              <a class="text-dark font-weight-bold pr-4 border-right" href="#"
                 >Vantage</a
               >
             </li>
-            <li>
-              <a class="h5 text-dark font-weight-bold pr-3 mr-2" href="#"
-                >Weather</a
-              >
+            <li class="text-nowrap text-center">
+              <a class="text-dark font-weight-bold" href="#">Weather</a>
             </li>
-            <span class="h5 text-secondary d-flex align-items-center"
-              >Search &nbsp
+            <li class="d-flex align-content-center">
+              <span class="text-secondary">Search &nbsp </span>
               <img
+                class=""
                 src="https://g.newsweek.com/www/images/icon-search-glass.svg"
                 width="20"
                 alt=""
               />
-              <label class="element-invisible" for="edit-search-block-form--4">
-              </label>
-            </span>
+            </li>
+
+            <label class="element-invisible" for="edit-search-block-form--4">
+            </label>
           </ul>
         </nav>
       </div>
 
       <nav
-        class="bot-nav d-none d-lg-block border border-right-0 border-left-0 py-2"
+        class="bot-nav d-none d-lg-block border border-right-0 border-left-0"
       >
-        <ul class="d-flex align-items-center m-0">
+        <ul class="d-flex m-0 py-2">
           <li>
             <a class="text-uppercase text-dark font-weight-bold mx-4" href="#"
               >trending</a
@@ -216,7 +202,5 @@
         </ul>
       </nav>
     </header>
-
-    <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
   </body>
 </html>

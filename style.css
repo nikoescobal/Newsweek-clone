@@ -69,13 +69,36 @@ header {
 
 .subscribe-btn {
   background-color: #ffe400;
-  padding: 2px 16px;
+  padding: 2px 12px;
+  font-size: 13px;
   border: none;
 }
 
 .login-btn {
   background-color: transparent;
+  font-size: 19px;
   border: none;
+}
+
+i.fa-user::before {
+  font-size: 19px;
+  color: #ffccc7;
+}
+
+i.fa-bars::before {
+  font-size: 20px;
+  color: #ffa39b;
+}
+
+.mid-nav::before {
+  width: 78px;
+  height: 13px;
+  background-color: #f72210;
+}
+
+.mid-nav ul {
+  width: 100%;
+  max-width: 1300px;
 }
 
 /* .special-border {
@@ -83,6 +106,10 @@ header {
   padding-right: 22px;
   border-right: solid 1px #aaa;
 } */
+
+.mid-nav ul a {
+  font-size: 19px;
+}
 
 .bot-nav li {
   display: flex;
@@ -92,8 +119,46 @@ header {
   align-items: center;
 }
 
+@media (min-width: 576px) {
+  .newsweek-icon {
+    width: 132px;
+  }
+
+  .subscribe-btn {
+    padding: 2px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 768px) {
+  .newsweek-icon {
+    width: 132px;
+  }
+
+  .subscribe-btn {
+    padding: 2px 16px;
+    font-size: 19px;
+  }
+
+  i.fa-bars::before {
+    font-size: 28px;
+    color: #ffa39b;
+  }
+}
+
 @media (min-width: 992px) {
   .newsweek-icon {
     width: 396px;
+  }
+
+  .mid-nav::before {
+    position: absolute;
+    top: 108px;
+    right: 0;
+    content: "";
+    display: block;
+    background-color: #f72210;
+    border-left: 12px solid white;
+    border-top: 13px solid #f72210;
   }
 }
