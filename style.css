@@ -26,12 +26,13 @@ ul {
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 a:hover {
-  text-decoration: none;
-  color: #f72210;
+  text-decoration: underline;
+  color: inherit;
+  text-decoration-color: #f72210;
 }
 
 /*
@@ -117,6 +118,18 @@ i.fa-bars::before {
 
 .bot-nav a {
   align-items: center;
+}
+
+/*
+      ==============================================
+                  ****** MAIN ******
+      ==============================================
+ */
+
+#main {
+  width: 1360px;
+  height: 7008px;
+  border: solid 3px aquamarine;
 }
 
 @media (min-width: 576px) {
