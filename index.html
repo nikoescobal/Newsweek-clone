@@ -208,7 +208,7 @@
     <main>
       <div id="main" class="container-fluid mx-auto">
         <div class="row">
-          <div class="col-lg bg-transparent">
+          <div class="col-lg position-sticky bg-transparent">
             <h6 class="text-secondary text-uppercase font-weight-bold pt-2">
               featured stories
             </h6>
@@ -844,7 +844,7 @@
             </div>
           </div>
 
-          <div class="col-lg bg-transparent">
+          <div class="col-lg bg-transparent position-sticky">
             <h6
               class="text-secondary text-uppercase font-weight-bold pb-2 pt-4"
             >
@@ -1080,17 +1080,31 @@
               </figcaption>
             </figure>
 
-            <div class="card w-75 ml-lg-3 mt-lg-4 bg-light">
-              <div class="flex position-relative">
-                <div class="d-flex">
-                  <span class="icon-n"></span>
-                  <div class="card-body"></div>
-                  <h5 class="card-title text-uppercase font-weight-bold">
-                    Start your day with our top 5 articles
-                  </h5>
+            <div class="card w-100 mt-lg-4 bg-light">
+              <div class="card-body">
+                <div class="flex">
+                  <div class="d-flex">
+                    <span class="icon-n"></span>
+                    <h6 class="card-title text-uppercase font-weight-bold">
+                      Start your day with our top 5 articles
+                    </h6>
+                  </div>
                 </div>
-                <p class="card-text">start your day with our top 5 articles</p>
-                <a href="#" class="btn btn-primary">Button</a>
+                <form>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="Email Address"
+                    />
+                  </div>
+                </form>
+                <a
+                  href="#"
+                  class="container-fluid btn bg-red text-white text-uppercase font-weight-bold"
+                  >free sign up <i class="fas fa-chevron-right"></i>
+                </a>
               </div>
             </div>
           </div>
