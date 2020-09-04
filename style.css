@@ -132,7 +132,7 @@ i.fa-bars::before {
   border: solid 3px aquamarine;
 }
 
-@media (min-width: 576px) {
+.top-story @media (min-width: 576px) {
   .newsweek-icon {
     width: 132px;
   }
