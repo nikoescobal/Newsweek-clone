@@ -45,6 +45,10 @@ a:hover {
   background-color: #f72210;
 }
 
+.text-red {
+  color: #f72210;
+}
+
 /*
       ==============================================
                   ****** HEADER ******
@@ -193,7 +197,11 @@ i.fa-bars::before {
 
 .sep-issue a {
   background-color: #f4f5f6;
-  padding: 8px;
+  padding: 8px 10px;
+}
+
+.mag-img {
+  object-fit: cover;
 }
 
 @media (min-width: 768px) {
