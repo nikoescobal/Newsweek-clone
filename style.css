@@ -17,7 +17,7 @@
 body {
   font-family: "Roboto Condensed", serif;
   width: 100%;
-  max-width: 1700px;
+  max-width: 1440px;
 }
 
 ul {
@@ -96,7 +96,7 @@ i.fa-bars::before {
 }
 
 .mid-nav::before {
-  width: 5%;
+  width: 7%;
   height: 13px;
   background-color: #f72210;
 }
@@ -126,8 +126,8 @@ i.fa-bars::before {
  */
 
 #main {
-  width: 1400px;
-  min-width: 100%;
+  width: 100%;
+  max-width: 1440px;
   height: 7008px;
 }
 
