@@ -96,24 +96,19 @@ i.fa-bars::before {
 }
 
 .mid-nav::before {
-  width: 78px;
+  width: 5%;
   height: 13px;
   background-color: #f72210;
 }
 
 .mid-nav ul {
-  width: 100%;
-  max-width: 1300px;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
 }
 
-/* .special-border {
-  margin-right: 22px;
-  padding-right: 22px;
-  border-right: solid 1px #aaa;
-} */
-
 .mid-nav ul a {
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .bot-nav li {
@@ -131,7 +126,8 @@ i.fa-bars::before {
  */
 
 #main {
-  width: 1310px;
+  width: 1400px;
+  min-width: 100%;
   height: 7008px;
 }
 
