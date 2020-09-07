@@ -133,7 +133,6 @@ i.fa-bars::before {
 #main {
   width: 1310px;
   height: 7008px;
-  border: solid 3px aquamarine;
 }
 
 .top-story @media (min-width: 576px) {
