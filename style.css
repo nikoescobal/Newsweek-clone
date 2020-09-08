@@ -199,6 +199,11 @@ i.fa-bars::before {
   object-fit: cover;
 }
 
+.special-image {
+  top: 10px;
+  left: 105px;
+}
+
 @media (min-width: 768px) {
   .newsweek-icon {
     width: 132px;
