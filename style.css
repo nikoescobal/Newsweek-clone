@@ -125,10 +125,25 @@ i.fa-bars::before {
       ==============================================
  */
 
+h1 {
+  font-size: 22px;
+}
+
 #main {
   width: 100%;
   max-width: 1440px;
   height: 7008px;
+}
+
+.category {
+  background-color: rgba(255, 255, 255, 0.9);
+  bottom: 0;
+  left: 0;
+}
+
+.summary p {
+  font-family: "Arimo", serif;
+  font-size: 13px;
 }
 
 .top-story @media (min-width: 576px) {
