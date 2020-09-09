@@ -204,6 +204,13 @@ i.fa-bars::before {
   left: 105px;
 }
 
+.newsletter-image {
+  background: url("https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&h=265&q=90&f=742bce9a6f72dd8f19ba2e7fd5db06e5");
+  background-repeat: no-repeat;
+  height: 301px;
+  object-fit: cover;
+}
+
 @media (min-width: 768px) {
   .newsweek-icon {
     width: 132px;
