@@ -208,13 +208,20 @@ i.fa-bars::before {
   left: 105px;
 }
 
+.newsletter-p {
+  color: #333333;
+  font-size: 15px;
+  font-family: "Lato", serif;
+  font-weight: lighter;
+}
+
 .newsletter-image {
   width: 95%;
   background: url("https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&h=265&q=90&f=742bce9a6f72dd8f19ba2e7fd5db06e5");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 275px;
+  height: 301px;
 }
 
 @media (min-width: 768px) {
