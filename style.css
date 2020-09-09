@@ -72,6 +72,12 @@ header {
   width: 132px;
 }
 
+.footer-newsweek-icon {
+  fill: #f72210;
+  width: 236px;
+  margin-bottom: 8px;
+}
+
 .weather-icon {
   width: 24px;
 }
@@ -130,9 +136,11 @@ i.fa-bars::before {
  */
 
 #main {
+  padding: 20px 30px 0;
+  margin: 0 45px;
   width: 100%;
   max-width: 1440px;
-  height: 7008px;
+  height: 100%;
 }
 
 .top-story @media (min-width: 576px) {
@@ -221,8 +229,73 @@ i.fa-bars::before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 301px;
+  height: 275px;
 }
+
+/*
+      ==============================================
+                  ****** FOOTER ******
+      ==============================================
+ */
+
+.footer-page {
+  padding: 30px 0;
+}
+
+.copyright {
+  text-transform: uppercase;
+  color: #666;
+  font-size: 12px;
+}
+
+.footer-left p {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.social {
+  width: 150px;
+}
+
+.footer-links-edition {
+  width: 500px;
+}
+
+.menu {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+i.fa-facebook-square::before {
+  font-size: 26px;
+  color: #666666;
+}
+
+i.fa-twitter::before {
+  font-size: 26px;
+  color: #666666;
+}
+
+i.fa-instagram-square::before {
+  font-size: 26px;
+  color: #666666;
+}
+
+i.fa-tumblr::before {
+  font-size: 26px;
+  color: #666666;
+}
+
+i.fa-linkedin-in::before {
+  font-size: 26px;
+  color: #666666;
+}
+
+/*
+      ==============================================
+                  ****** MEDIA ******
+      ==============================================
+ */
 
 @media (min-width: 768px) {
   .newsweek-icon {
