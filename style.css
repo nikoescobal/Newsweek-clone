@@ -148,6 +148,7 @@ article figure img {
 .summary p {
   font-family: "Arimo", serif;
   font-size: 13px;
+  color: #333;
 }
 
 .top-story @media (min-width: 576px) {
