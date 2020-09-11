@@ -119,6 +119,23 @@ i.fa-bars::before {
   align-items: center;
 }
 
+.author-profile {
+  width: 63px;
+  height: 63px;
+}
+
+.featured-stories {
+  padding-top: 20px;
+}
+
+.block-title {
+  color: #03030366;
+}
+
+.the-debate {
+  padding-top: 30px;
+}
+
 /*
       ==============================================
                   ****** MAIN ******
@@ -140,7 +157,7 @@ article figure img {
 }
 
 .category {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #ffffffe6;
   bottom: 0;
   left: 0;
 }
@@ -189,8 +206,8 @@ article figure img {
   margin-right: 10px;
 }
 
-.col-lg {
-  height: 800px;
+.border-thick {
+  border-top: solid 4px #e2e2e2;
 }
 
 .see-features {
@@ -217,6 +234,32 @@ article figure img {
 
 .mag-img {
   object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .featured-stories::before {
+    content: "";
+    display: block;
+    height: 18px;
+    background-color: #f4f5f7;
+    border-top: 1px solid #e2e2e2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .the-debate::before {
+    content: "";
+    display: block;
+    height: 18px;
+    background-color: #f4f5f7;
+    border-top: 1px solid #e2e2e2;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    right: -15px;
+  }
 }
 
 @media (min-width: 768px) {
