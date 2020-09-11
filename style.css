@@ -49,6 +49,15 @@ a:hover {
   color: #f72210;
 }
 
+.border-div {
+  display: block;
+  border-top: 18px solid #e2e2e2;
+  position: absolute;
+  top: 0;
+  left: -15px;
+  right: -15px;
+}
+
 /*
       ==============================================
                   ****** HEADER ******
@@ -103,8 +112,6 @@ i.fa-bars::before {
 
 .mid-nav ul {
   width: 95%;
-  display: flex;
-  justify-content: space-between;
 }
 
 .mid-nav ul a {
@@ -129,6 +136,11 @@ i.fa-bars::before {
   color: #555555;
 }
 
+.ms-images {
+  width: 95px;
+  height: 95px;
+}
+
 .featured-stories {
   padding-top: 20px;
 }
@@ -142,7 +154,11 @@ i.fa-bars::before {
 }
 
 .opinion {
-  /* margin-top: 30px; */
+  margin-top: 28px;
+}
+
+.more-stories {
+  margin-top: 28px;
 }
 
 /*
@@ -285,6 +301,18 @@ article figure img {
     left: -15px;
     right: -15px;
   }
+
+  .more-stories::before {
+    content: "";
+    display: block;
+    height: 18px;
+    background-color: #f4f5f7;
+    border-top: 1px solid #e2e2e2;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    right: -15px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -312,11 +340,6 @@ article figure img {
 }
 
 @media (min-width: 992px) {
-
-.the-debate {
-  padding-top: 0;
-}
-
   .newsweek-icon {
     width: 396px;
   }
