@@ -168,32 +168,25 @@ article figure img {
   color: #333;
 }
 
-.top-story @media (min-width: 576px) {
-  .newsweek-icon {
-    width: 132px;
-  }
-
-  .subscribe-btn {
-    padding: 2px 16px;
-    font-size: 13px;
-  }
-}
-
 .special-border {
+  position: absolute;
+  bottom: -16px;
+  margin: 0 auto;
   border: 1px solid #d9d9d9;
   min-height: 3px;
   border-right: 0;
   border-left: 0;
-  position: relative;
 }
 
 .vs-icon {
+  margin: 0 auto;
   width: 32px;
   height: 32px;
   background-color: black;
-  position: absolute;
-  right: 142px;
-  bottom: -16px;
+  color: #d6d6d6;
+  position: relative;
+  /* right: 142px; */
+  /* bottom: -16px; */
 }
 
 .icon-n {
@@ -234,6 +227,17 @@ article figure img {
 
 .mag-img {
   object-fit: cover;
+}
+
+@media (min-width: 576px) {
+  .newsweek-icon {
+    width: 132px;
+  }
+
+  .subscribe-btn {
+    padding: 2px 16px;
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 767px) {
