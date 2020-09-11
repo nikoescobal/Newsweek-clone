@@ -142,7 +142,7 @@ i.fa-bars::before {
 }
 
 .opinion {
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 /*
@@ -288,6 +288,14 @@ article figure img {
 }
 
 @media (min-width: 768px) {
+  /* article figure img {
+    min-width: 315px;
+  } */
+
+  .featured-stories {
+    padding-top: 0;
+  }
+
   .newsweek-icon {
     width: 132px;
   }
@@ -304,6 +312,11 @@ article figure img {
 }
 
 @media (min-width: 992px) {
+
+.the-debate {
+  padding-top: 0;
+}
+
   .newsweek-icon {
     width: 396px;
   }
