@@ -49,15 +49,6 @@ a:hover {
   color: #f72210;
 }
 
-.border-div {
-  display: block;
-  border-top: 18px solid #e2e2e2;
-  position: absolute;
-  top: 0;
-  left: -15px;
-  right: -15px;
-}
-
 /*
       ==============================================
                   ****** HEADER ******
@@ -187,6 +178,23 @@ article figure img {
   left: 0;
 }
 
+.culture-tag {
+  font-size: 13px;
+  display: inline-block;
+  background-color: #c2d4d7;
+  bottom: 24px;
+  left: 0;
+  position: absolute;
+}
+
+.newsletter-signup {
+  max-width: 300px;
+  margin: 0 auto 30px;
+  border: 1px solid #e5e5e5;
+  background-color: #f4f5f6;
+  padding: 20px;
+}
+
 .summary p {
   font-family: "Arimo", serif;
   font-size: 13px;
@@ -266,6 +274,18 @@ article figure img {
 }
 
 @media (max-width: 767px) {
+  .border-div {
+    margin: 32px 0 10px;
+    border-top: solid 1px #e2e2e2;
+    padding-top: 18px;
+    width: 768px;
+    background-color: #f4f5f7;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+  }
+
   .featured-stories::before {
     content: "";
     display: block;
@@ -303,6 +323,18 @@ article figure img {
   }
 
   .more-stories::before {
+    content: "";
+    display: block;
+    height: 18px;
+    background-color: #f4f5f7;
+    border-top: 1px solid #e2e2e2;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    right: -15px;
+  }
+
+  .my-turn::before {
     content: "";
     display: block;
     height: 18px;
