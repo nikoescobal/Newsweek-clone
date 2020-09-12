@@ -405,4 +405,14 @@ article figure img {
     border-left: 12px solid white;
     border-top: 13px solid #f72210;
   }
+
+  .culture-tag-md {
+    font-size: 9px;
+    display: inline-block;
+    background-color: #c2d4d7;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+  }
 }
