@@ -361,6 +361,14 @@ article figure img {
     min-width: 315px;
   } */
 
+  .the-debate {
+    padding-top: 0;
+  }
+
+  .opinion {
+    margin-top: 0;
+  }
+
   .featured-stories {
     padding-top: 0;
   }
