@@ -187,6 +187,15 @@ article figure img {
   position: absolute;
 }
 
+.culture-tag-md {
+  font-size: 13px;
+  display: inline-block;
+  background-color: #c2d4d7;
+  top: 92px;
+  left: 0;
+  position: absolute;
+}
+
 .newsletter-signup {
   max-width: 300px;
   margin: 0 auto 30px;
