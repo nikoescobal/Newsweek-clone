@@ -182,6 +182,14 @@ article figure img {
   left: 0;
 }
 
+.mag-category {
+  margin: 10px;
+  background-color: #ffffffe6;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+
 .culture-tag {
   font-size: 13px;
   display: inline-block;
@@ -191,6 +199,17 @@ article figure img {
   position: absolute;
   z-index: 1;
 }
+
+.mag-tag {
+  display: inline-block;
+  color: #f72210;
+  background-color: #ffffffe6;
+  bottom: 60px;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+
 
 .magazine-tag {
   font-size: 13px;
@@ -204,7 +223,7 @@ article figure img {
 
 .newsletter-signup {
   max-width: 300px;
-  margin: 0 auto 26px;
+  margin: 0 auto;
   border: 1px solid #e5e5e5;
   background-color: #f4f5f6;
   padding: 20px;
@@ -247,14 +266,27 @@ article figure img {
   margin-right: 10px;
 }
 
+.icon-ns {
+  /* margin-top: 20px; */
+  flex: none;
+  display: block;
+  width: 29px;
+  height: 28px;
+  background: url(https://g.newsweek.com/www/images/logo-n1.svg),
+    center no-repeat #f72210;
+  /* margin-right: 10px; */
+}
+
+
 .border-thick {
   border-top: solid 4px #e2e2e2;
 }
 
 .see-features {
+  position: relative;
+  bottom: 20px;
   background-color: #f4f5f6;
-  width: 290px;
-  /* padding-right: 20px; */
+  width: 100%;
 }
 
 .see-features:hover {
@@ -405,6 +437,10 @@ article figure img {
     font-size: 28px;
     color: #ffa39b;
   }
+
+  .newsletter-signup {
+    margin-bottom: 20px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -432,4 +468,7 @@ article figure img {
     position: absolute;
     z-index: 1;
   }
+
+
+
 }
