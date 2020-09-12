@@ -214,6 +214,15 @@ a.article-link {
   z-index: 1;
 }
 
+.ep-tag {
+  display: inline-block;
+  color: #f72210;
+  background-color: #ffffffe6;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
 
 .magazine-tag {
   font-size: 13px;
@@ -407,6 +416,19 @@ a.article-link {
     left: -15px;
     right: -15px;
   }
+
+  .editors-pick::before {
+    content: "";
+    display: block;
+    height: 18px;
+    background-color: #f4f5f7;
+    border-top: 1px solid #e2e2e2;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    right: -15px;
+  }
+
 
 }
 
