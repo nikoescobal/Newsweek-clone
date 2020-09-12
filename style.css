@@ -182,6 +182,10 @@ article figure img {
   left: 0;
 }
 
+a.article-link {
+  font-size: 16px;
+}
+
 .mag-category {
   margin: 10px;
   background-color: #ffffffe6;
@@ -204,7 +208,7 @@ article figure img {
   display: inline-block;
   color: #f72210;
   background-color: #ffffffe6;
-  bottom: 60px;
+  bottom: 40px;
   left: 0;
   position: absolute;
   z-index: 1;
@@ -284,7 +288,6 @@ article figure img {
 
 .see-features {
   position: relative;
-  bottom: 20px;
   background-color: #f4f5f6;
   width: 100%;
 }
@@ -440,6 +443,10 @@ article figure img {
 
   .newsletter-signup {
     margin-bottom: 20px;
+  }
+
+  .article-link {
+    font-size: 20px;
   }
 }
 
