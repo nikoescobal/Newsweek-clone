@@ -144,6 +144,10 @@ i.fa-bars::before {
   padding-top: 30px;
 }
 
+.magazine-title {
+  padding-top: 30px;
+}
+
 .opinion {
   margin-top: 28px;
 }
@@ -183,16 +187,6 @@ article figure img {
   display: inline-block;
   background-color: #c2d4d7;
   bottom: 0;
-  left: 0;
-  position: absolute;
-  z-index: 1;
-}
-
-.culture-tag-md {
-  font-size: 13px;
-  display: inline-block;
-  background-color: #c2d4d7;
-  top: 0;
   left: 0;
   position: absolute;
   z-index: 1;
@@ -356,6 +350,19 @@ article figure img {
     left: -15px;
     right: -15px;
   }
+
+  .magazine::before {
+    content: "";
+    display: block;
+    height: 18px;
+    background-color: #f4f5f7;
+    border-top: 1px solid #e2e2e2;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    right: -15px;
+  }
+
 }
 
 @media (min-width: 768px) {
