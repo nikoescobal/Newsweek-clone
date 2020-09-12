@@ -169,7 +169,7 @@ h1 {
 #main {
   width: 100%;
   max-width: 1440px;
-  height: 7008px;
+  height: 100%;
 }
 
 article figure img {
@@ -192,9 +192,19 @@ article figure img {
   z-index: 1;
 }
 
+.magazine-tag {
+  font-size: 13px;
+  display: inline-block;
+  background-color: #c2d4d7;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+
 .newsletter-signup {
   max-width: 300px;
-  margin: 0 auto 30px;
+  margin: 0 auto 26px;
   border: 1px solid #e5e5e5;
   background-color: #f4f5f6;
   padding: 20px;
@@ -413,11 +423,11 @@ article figure img {
     border-top: 13px solid #f72210;
   }
 
-  .culture-tag-md {
+  .culture-tag {
     font-size: 9px;
     display: inline-block;
     background-color: #c2d4d7;
-    top: 0;
+    bottom: 0;
     left: 0;
     position: absolute;
     z-index: 1;
