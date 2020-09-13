@@ -263,11 +263,9 @@ a.article-link {
   border: 2px dotted mistyrose
 } */
 
-/* .special-text {
-  position: absolute;
-  bottom: 20%;
-  right: 50px;
-} */
+.subscribe-text {
+  font-size: 20px;
+}
 
 .special-image {
   position: absolute;
@@ -478,6 +476,10 @@ a.article-link {
 
   .newsweek-icon {
     width: 132px;
+  }
+
+  .subscribe-text {
+    font-size: 24px;
   }
 
   .subscribe-btn {
