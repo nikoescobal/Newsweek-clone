@@ -267,8 +267,12 @@ a.article-link {
   font-size: 20px;
 }
 
+.newsletter-heading {
+  font-size: 24px;
+}
+
 .newsletter-text {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .newsletter-button-text {
@@ -529,7 +533,7 @@ a.article-link {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 275px;
+    height: 254px;
   }
 }
 
