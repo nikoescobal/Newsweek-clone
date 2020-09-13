@@ -258,6 +258,23 @@ a.article-link {
   border-left: 0;
 }
 
+/* .image-container {
+  position: absolute;
+  border: 2px dotted mistyrose
+} */
+
+/* .special-text {
+  position: absolute;
+  bottom: 20%;
+  right: 50px;
+} */
+
+.special-image {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+
 .vs-icon {
   margin: 0 auto;
   width: 32px;
@@ -429,7 +446,17 @@ a.article-link {
     right: -15px;
   }
 
-
+  .subscribe::before {
+    content: "";
+    display: block;
+    height: 18px;
+    background-color: #f4f5f7;
+    border-top: 1px solid #e2e2e2;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    right: -15px;
+  }
 }
 
 @media (min-width: 768px) {
