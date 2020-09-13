@@ -267,6 +267,14 @@ a.article-link {
   font-size: 20px;
 }
 
+.newsletter-text {
+  font-size: 20px;
+}
+
+.newsletter-button-text {
+  font-size: 17px;
+}
+
 .special-image {
   position: absolute;
   left: 30px;
@@ -452,6 +460,18 @@ a.article-link {
     border-top: 1px solid #e2e2e2;
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .newsletter::before {
+    content: "";
+    display: block;
+    height: 18px;
+    background-color: #f4f5f7;
+    border-top: 1px solid #e2e2e2;
+    position: absolute;
+    top: 0;
     left: -15px;
     right: -15px;
   }
@@ -480,6 +500,10 @@ a.article-link {
 
   .subscribe-text {
     font-size: 24px;
+  }
+
+  .newsletter-button-text {
+    font-size: 18px;
   }
 
   .subscribe-btn {
