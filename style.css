@@ -168,17 +168,13 @@ i.fa-bars::before {
       ==============================================
  */
 
-.featured-stories p {
+.featured-stories p,
+.magazine p {
   color: #333;
 }
 
 .more-stories p {
   font-family: "Arimo", serif;
-  color: #333;
-}
-
-.magazine p {
-  font-family: "Lato", serif;
   color: #333;
 }
 
@@ -211,7 +207,6 @@ h1 {
 h2 {
   font-size: 22px;
 }
-
 
 #main {
   width: 100%;
@@ -318,7 +313,7 @@ a.article-link {
   font-size: 15px;
 }
 
-.newsletter-button-text {
+.btn-text-2 {
   font-size: 17px;
 }
 
@@ -574,8 +569,8 @@ a.article-link {
     font-size: 24px;
   }
 
-  .newsletter-button-text {
-    font-size: 18px;
+  .btn-text {
+    font-size: 17px;
   }
 
   .subscribe-btn {
@@ -637,11 +632,18 @@ a.article-link {
 
   .newsletter-image {
     object-fit: cover;
-    height: 339px;
+    height: 378px;
   }
 
-  .newsletter-button-text {
-    font-size: 17px;
+  .btn-text-2 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .newsletter-image {
+    object-fit: cover;
+    height: 339px;
   }
 }
 
