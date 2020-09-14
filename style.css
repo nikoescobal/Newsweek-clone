@@ -27,7 +27,6 @@ ul {
 a {
   text-decoration: none;
   color: black;
-  /* display: flex; */
 }
 
 a:hover {
@@ -49,8 +48,6 @@ a:hover {
 .text-red {
   color: #f72210;
 }
-
-
 
 /*
       ==============================================
@@ -108,16 +105,16 @@ i.fa-bars::before {
   width: 95%;
 }
 
+.bot-nav a {
+  align-items: center;
+}
+
 .mid-nav ul a {
   font-size: 18px;
 }
 
 .bot-nav li {
   display: flex;
-}
-
-.bot-nav a {
-  align-items: center;
 }
 
 .author-profile {
@@ -128,7 +125,7 @@ i.fa-bars::before {
 .author-name {
   font-family: "Roboto Condensed", serif;
   font-size: 14px;
-  color: #555555;
+  color: #555;
 }
 
 .ms-images {
@@ -167,7 +164,6 @@ i.fa-bars::before {
  */
 
 .featured-stories p {
-  font-family: "Arimo", serif;
   color: #333;
 }
 
@@ -329,8 +325,6 @@ a.article-link {
   background-color: black;
   color: #d6d6d6;
   position: relative;
-  /* right: 142px; */
-  /* bottom: -16px; */
 }
 
 .icon-n {
@@ -338,22 +332,21 @@ a.article-link {
   display: block;
   width: 29px;
   height: 28px;
-  background: url(https://g.newsweek.com/www/images/logo-n1.svg),
+  background:
+    url(https://g.newsweek.com/www/images/logo-n1.svg),
     center no-repeat #f72210;
   margin-right: 10px;
 }
 
 .icon-ns {
-  /* margin-top: 20px; */
   flex: none;
   display: block;
   width: 29px;
   height: 28px;
-  background: url(https://g.newsweek.com/www/images/logo-n1.svg),
+  background:
+    url(https://g.newsweek.com/www/images/logo-n1.svg),
     center no-repeat #f72210;
-  /* margin-right: 10px; */
 }
-
 
 .border-thick {
   border-top: solid 4px #e2e2e2;
@@ -386,11 +379,6 @@ a.article-link {
 }
 
 .subscribe img {
-  width: 170px;
-  height: 227px;
-}
-
-.special-image {
   width: 170px;
   height: 227px;
 }
@@ -680,27 +668,11 @@ a.article-link {
   flex-wrap: wrap;
 }
 
-i.fa-facebook-square::before {
-  font-size: 22px;
-  color: #666666;
-}
-
-i.fa-twitter::before {
-  font-size: 22px;
-  color: #666666;
-}
-
-i.fa-instagram-square::before {
-  font-size: 22px;
-  color: #666666;
-}
-
-i.fa-tumblr::before {
-  font-size: 22px;
-  color: #666666;
-}
-
+i.fa-facebook-square::before,
+i.fa-twitter::before,
+i.fa-instagram-square::before,
+i.fa-tumblr::before,
 i.fa-linkedin-in::before {
   font-size: 22px;
-  color: #666666;
+  color: #666;
 }
