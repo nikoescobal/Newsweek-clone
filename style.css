@@ -193,7 +193,7 @@ i.fa-bars::before {
 
 .subscribe-p {
   font-family: "Lato", serif;
-  /* font-weight: 300; */
+  font-weight: 300;
   color: #333;
 }
 
@@ -664,11 +664,12 @@ a.article-link {
   text-transform: uppercase;
   color: #666;
   font-size: 12px;
+  font-weight: 300;
 }
 
 .page-footer {
   padding: 30px 10px;
-  font-family: "Arimo", serif;
+  font-family: "Lato", serif;
 }
 
 .footer-links {
