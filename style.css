@@ -619,7 +619,6 @@ a.article-link {
     right: 0;
     content: "";
     display: block;
-    background-color: #f72210;
     border-left: 12px solid white;
     border-top: 13px solid #f72210;
   }
