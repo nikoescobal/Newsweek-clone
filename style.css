@@ -618,21 +618,13 @@ a.article-link {
 }
 
 .page-footer {
-  padding: 30px 0;
+  padding: 30px 10px;
+  font-family: "Arimo", serif;
 }
 
-.footer-left p {
-  margin-top: 16px;
-  margin-bottom: 0;
+.footer-links {
+  font-size: 14px;
 }
-
-.social {
-  width: 150px;
-}
-
-/* .footer-language-options {
-  width: 500px;
-} */
 
 .menu {
   width: 100%;
@@ -640,26 +632,26 @@ a.article-link {
 }
 
 i.fa-facebook-square::before {
-  font-size: 26px;
+  font-size: 22px;
   color: #666666;
 }
 
 i.fa-twitter::before {
-  font-size: 26px;
+  font-size: 22px;
   color: #666666;
 }
 
 i.fa-instagram-square::before {
-  font-size: 26px;
+  font-size: 22px;
   color: #666666;
 }
 
 i.fa-tumblr::before {
-  font-size: 26px;
+  font-size: 22px;
   color: #666666;
 }
 
 i.fa-linkedin-in::before {
-  font-size: 26px;
+  font-size: 22px;
   color: #666666;
 }
