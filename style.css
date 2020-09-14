@@ -27,6 +27,7 @@ ul {
 a {
   text-decoration: none;
   color: black;
+  /* display: flex; */
 }
 
 a:hover {
@@ -366,6 +367,11 @@ a.article-link {
     padding: 2px 16px;
     font-size: 13px;
   }
+
+  footer a,
+  li {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -623,7 +629,7 @@ a.article-link {
 }
 
 .footer-links {
-  font-size: 14px;
+  font-size: 12.5px;
 }
 
 .menu {
