@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8" />
   <link
     href="https://fonts.googleapis.com/css2?family=Arimo&family=Lato:wght@100;300;400;700&family=Roboto+Condensed:wght@400;700&display=swap"
     rel="stylesheet">
@@ -10,7 +11,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
 
-  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Newsweek Clone</title>
 
@@ -40,12 +40,12 @@
         </g>
       </svg>
       <div class="d-flex align-items-center mt-lg-4">
-        <button class="login-btn text-uppercase text-white font-weight-bold pr-4 d-none d-md-block">
+        <button name="button" class="login-btn text-uppercase text-white font-weight-bold pr-4 d-none d-md-block">
           login
         </button>
         <div class="d-flex align-items-center">
           <i class="fas fa-user fa-md pr-2 pr-sm-3 d-block d-md-none"></i>
-          <button class="subscribe-btn btn rounded-pill text-uppercase font-weight-bold">
+          <button name="button" class="subscribe-btn btn rounded-pill text-uppercase font-weight-bold">
             subscribe <i class="fas fa-chevron-right"></i>
           </button>
 
@@ -90,14 +90,14 @@
         <li class="text-nowrap">
           <a class="text-dark pr-3 font-weight-bold" href="#">Weather</a>
         </li>
+      </ul>
 
-        <li class="d-flex">
-          <span class="text-secondary d-flex align-items-center mr-2">Search</span>
-          <img src="https://g.newsweek.com/www/images/icon-search-glass.svg" width="20" alt="" />
-        </li>
+        <div class="d-flex justify-content-start">
+          <div class="text-secondary d-flex align-items-center ml-lg-4 mr-lg-2 pb-3">Search</div>
+          <img class="pb-3" src="https://g.newsweek.com/www/images/icon-search-glass.svg" width="20" alt="search icon" />
+        </div>
         <label class="element-invisible" for="edit-search-block-form--4">
         </label>
-      </ul>
     </nav>
 
     <nav class="bot-nav d-none d-lg-block border-0 border-left-0">
