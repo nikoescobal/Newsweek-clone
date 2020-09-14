@@ -126,6 +126,7 @@ i.fa-bars::before {
 }
 
 .author-name {
+  font-family: "Roboto Condensed", serif;
   font-size: 14px;
   color: #555555;
 }
@@ -165,7 +166,37 @@ i.fa-bars::before {
       ==============================================
  */
 
-main p {
+/* .culture-travel p {
+  font-family: "Arimo", serif;
+  color: #333;
+} */
+
+.featured-stories p {
+  font-family: "Arimo", serif;
+  color: #333;
+}
+
+.more-stories p {
+  font-family: "Arimo", serif;
+  color: #333;
+}
+
+.magazine p {
+  font-family: "Arimo", serif;
+  color: #333;
+}
+
+.editors-pick p {
+  font-family: "Arimo", serif;
+  color: #333;
+}
+
+.subscribe p {
+  font-family: "Arimo", serif;
+  color: #333;
+}
+
+.newsletter p {
   font-family: "Arimo", serif;
   color: #333;
 }
