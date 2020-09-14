@@ -109,6 +109,11 @@ i.fa-bars::before {
   align-items: center;
 }
 
+.sep-issue a {
+  background-color: #f4f5f6;
+  padding: 8px 10px;
+}
+
 .mid-nav ul a {
   font-size: 18px;
 }
@@ -367,11 +372,6 @@ a.article-link {
   bottom: 61px;
   left: 15px;
   z-index: 1;
-}
-
-.sep-issue a {
-  background-color: #f4f5f6;
-  padding: 8px 10px;
 }
 
 .mag-img {
