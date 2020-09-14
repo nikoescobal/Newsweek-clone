@@ -166,18 +166,13 @@ i.fa-bars::before {
       ==============================================
  */
 
-/* .culture-travel p {
-  font-family: "Lato", serif;
-  color: #333;
-} */
-
 .featured-stories p {
-  font-family: "Lato", serif;
+  font-family: "Arimo", serif;
   color: #333;
 }
 
 .more-stories p {
-  font-family: "Lato", serif;
+  font-family: "Arimo", serif;
   color: #333;
 }
 
@@ -187,7 +182,7 @@ i.fa-bars::before {
 }
 
 .editors-pick p {
-  font-family: "Lato", serif;
+  font-family: "Arimo", serif;
   color: #333;
 }
 
@@ -290,7 +285,7 @@ a.article-link {
 }
 
 .summary p {
-  font-family: "Lato", serif;
+  font-family: "Arimo", serif;
   font-size: 13px;
   color: #333;
 }
@@ -555,9 +550,11 @@ a.article-link {
 }
 
 @media (min-width: 768px) {
-  /* article figure img {
-    min-width: 315px;
-  } */
+  .summary p {
+    font-family: "Arimo", serif;
+    font-size: 15px;
+    color: #333;
+  }
 
   .the-debate {
     padding-top: 0;
@@ -671,7 +668,7 @@ a.article-link {
 
 .page-footer {
   padding: 30px 10px;
-  font-family: "Lato", serif;
+  font-family: "Arimo", serif;
 }
 
 .footer-links {
