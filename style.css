@@ -171,6 +171,7 @@ h1 {
   width: 100%;
   max-width: 1440px;
   height: 100%;
+  padding: 0 15px;
 }
 
 article figure img {
