@@ -208,6 +208,11 @@ h1 {
   font-size: 22px;
 }
 
+h2 {
+  font-size: 22px;
+}
+
+
 #main {
   width: 100%;
   max-width: 1440px;
@@ -318,9 +323,14 @@ a.article-link {
 }
 
 .special-image {
+  width: 100%;
   position: absolute;
   left: 30px;
   top: 20px;
+}
+
+.ns-image {
+  width: 100%;
 }
 
 .vs-icon {
