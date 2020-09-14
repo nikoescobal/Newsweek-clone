@@ -258,11 +258,6 @@ a.article-link {
   border-left: 0;
 }
 
-/* .image-container {
-  position: absolute;
-  border: 2px dotted mistyrose
-} */
-
 .subscribe-text {
   font-size: 20px;
 }
@@ -346,6 +341,20 @@ a.article-link {
 
 .mag-img {
   object-fit: cover;
+}
+
+.subscribe img {
+  width: 170px;
+  height: 227px;
+}
+
+.special-image {
+  width: 170px;
+  height: 227px;
+}
+
+.subscribe-block {
+  padding-bottom: 40px;
 }
 
 @media (min-width: 576px) {
@@ -464,8 +473,8 @@ a.article-link {
     border-top: 1px solid #e2e2e2;
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    left: -15px;
+    right: -15px;
   }
 
   .newsletter::before {
@@ -478,6 +487,18 @@ a.article-link {
     top: 0;
     left: -15px;
     right: -15px;
+  }
+
+  .page-footer::before {
+    content: "";
+    display: block;
+    height: 18px;
+    background-color: #f4f5f7;
+    border-top: 1px solid #e2e2e2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }
 
@@ -533,7 +554,8 @@ a.article-link {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 254px;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -563,6 +585,81 @@ a.article-link {
     z-index: 1;
   }
 
+  .newsletter-heading {
+    font-size: 22px;
+  }
 
+  .newsletter-image {
+    object-fit: cover;
+    height: 339px;
+  }
 
+  .newsletter-button-text {
+    font-size: 17px;
+  }
+}
+
+/*
+      ==============================================
+                  ****** FOOTER ******
+      ==============================================
+ */
+
+.footer-newsweek-icon {
+  fill: #f72210;
+  width: 236px;
+  margin-bottom: 8px;
+}
+
+.copyright {
+  text-transform: uppercase;
+  color: #666;
+  font-size: 12px;
+}
+
+.page-footer {
+  padding: 30px 0;
+}
+
+.footer-left p {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.social {
+  width: 150px;
+}
+
+/* .footer-language-options {
+  width: 500px;
+} */
+
+.menu {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+i.fa-facebook-square::before {
+  font-size: 26px;
+  color: #666666;
+}
+
+i.fa-twitter::before {
+  font-size: 26px;
+  color: #666666;
+}
+
+i.fa-instagram-square::before {
+  font-size: 26px;
+  color: #666666;
+}
+
+i.fa-tumblr::before {
+  font-size: 26px;
+  color: #666666;
+}
+
+i.fa-linkedin-in::before {
+  font-size: 26px;
+  color: #666666;
 }
