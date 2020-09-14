@@ -167,37 +167,44 @@ i.fa-bars::before {
  */
 
 /* .culture-travel p {
-  font-family: "Arimo", serif;
+  font-family: "Lato", serif;
   color: #333;
 } */
 
 .featured-stories p {
-  font-family: "Arimo", serif;
+  font-family: "Lato", serif;
   color: #333;
 }
 
 .more-stories p {
-  font-family: "Arimo", serif;
+  font-family: "Lato", serif;
   color: #333;
 }
 
 .magazine p {
-  font-family: "Arimo", serif;
+  font-family: "Lato", serif;
   color: #333;
 }
 
 .editors-pick p {
-  font-family: "Arimo", serif;
+  font-family: "Lato", serif;
   color: #333;
 }
 
 .subscribe p {
-  font-family: "Arimo", serif;
+  font-family: "Lato", serif;
+  color: #333;
+}
+
+.subscribe-p {
+  font-family: "Lato", serif;
+  /* font-weight: 300; */
   color: #333;
 }
 
 .newsletter p {
-  font-family: "Arimo", serif;
+  font-family: "Lato", serif;
+  font-weight: 300;
   color: #333;
 }
 
@@ -283,7 +290,7 @@ a.article-link {
 }
 
 .summary p {
-  font-family: "Arimo", serif;
+  font-family: "Lato", serif;
   font-size: 13px;
   color: #333;
 }
@@ -664,7 +671,7 @@ a.article-link {
 
 .page-footer {
   padding: 30px 10px;
-  font-family: "Arimo", serif;
+  font-family: "Lato", serif;
 }
 
 .footer-links {
