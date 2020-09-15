@@ -673,10 +673,6 @@ a.article-link {
   flex-wrap: wrap;
 }
 
-.social li {
-  list-style: none;
-}
-
 i.fa-facebook-square::before,
 i.fa-twitter::before,
 i.fa-instagram-square::before,
