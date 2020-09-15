@@ -632,18 +632,11 @@ a.article-link {
 
   .newsletter-image {
     object-fit: cover;
-    height: 378px;
+    height: 339px;
   }
 
   .btn-text-2 {
     font-size: 16px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .newsletter-image {
-    object-fit: cover;
-    height: 339px;
   }
 }
 
