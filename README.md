@@ -24,7 +24,7 @@ git clone git@github.com:nikoescobal/newsweek-bootstrap-clone.git
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/nikoescobal/newsweek-bootstrap-clone/664cf36ce37f4cd4242db2702a6e0be20e5b57a2/index.html)
+[Live Demo Link](https://rawcdn.githack.com/nikoescobal/newsweek-bootstrap-clone/16ebf8d2043029aac9959f2f7fcae2b911bb07ed/index.html)
 
 ## Author (Feel free to reach out. I'm always happy to connect :slightly_smiling_face:)
 
