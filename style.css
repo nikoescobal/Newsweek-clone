@@ -341,10 +341,6 @@ a.article-link {
   padding-bottom: 40px;
 }
 
-.text-invisible {
-  opacity: 0;
-}
-
 @media (min-width: 576px) {
   .newsweek-icon {
     width: 132px;
