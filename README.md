@@ -1,12 +1,12 @@
 # Newsweek Website clone
-Clone of [Newsweek](https://www.newsweek.com/)
+#Clone of [Newsweek](https://www.newsweek.com/) buit with Bootstrap 4
 
 This project consists of replicating the Newsweek website with the Bootstrap 4 framework, putting emphasis on how it behaves differently depending on the size of the screen where the website is rendered. It is fully responsive and utilizes Bootstrap classes, media queries, and fluid/responsive web design principles.
 
 - It is almost an exact replica of the [original page](https://imgur.com/a/jvAifdd).
 
 
-![Newsweek-fulldisplay](https://user-images.githubusercontent.com/62937819/93126236-ad6dc600-f6fe-11ea-9a01-07932854e608.jpg)
+![nesweek-screencapture](https://user-images.githubusercontent.com/62937819/93208593-611e9680-f78f-11ea-9f7d-15ebbb9c71b9.jpg)
 
 
 ## Built with
