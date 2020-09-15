@@ -1,5 +1,4 @@
-# Newsweek Website clone
-#Clone of [Newsweek](https://www.newsweek.com/) buit with Bootstrap 4
+# [Newsweek](https://www.newsweek.com/) Website Clone Built With Bootstrap 4
 
 This project consists of replicating the Newsweek website with the Bootstrap 4 framework, putting emphasis on how it behaves differently depending on the size of the screen where the website is rendered. It is fully responsive and utilizes Bootstrap classes, media queries, and fluid/responsive web design principles.
 
