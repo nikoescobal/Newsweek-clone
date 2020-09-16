@@ -63,6 +63,11 @@ header {
   width: 100%;
 }
 
+.mid-nav {
+  padding-top: 102px;
+}
+
+
 .newsweek-icon {
   filter: invert(1);
   width: 132px;
@@ -314,6 +319,17 @@ a.article-link {
 
 .border-thick {
   border-top: solid 4px #e2e2e2;
+}
+
+.footer-border {
+  border-top: 2px solid black;
+  width: 100%;
+}
+
+.solid {
+  margin: 0 -15px;
+  border: 0;
+  border-top: 1px solid #c9c7c7;
 }
 
 .see-features {
