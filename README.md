@@ -2,10 +2,10 @@
 
 This project consists of replicating the Newsweek website with the Bootstrap 4 framework, putting emphasis on how it behaves differently depending on the size of the screen where the website is rendered. It is fully responsive and utilizes Bootstrap classes, media queries, and fluid/responsive web design principles.
 
-- It is almost an exact replica of the [original page](https://imgur.com/a/jvAifdd).
+- It is an exact replica of the [original page](https://imgur.com/a/jvAifdd).
 
 
-![nesweek-screencapture](https://user-images.githubusercontent.com/62937819/93208593-611e9680-f78f-11ea-9f7d-15ebbb9c71b9.jpg)
+![newsweek-complete](https://user-images.githubusercontent.com/62937819/93362217-4ecc5780-f878-11ea-8148-77e47eadb509.jpg)
 
 
 ## Built with
