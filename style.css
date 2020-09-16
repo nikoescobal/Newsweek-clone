@@ -67,7 +67,6 @@ header {
   padding-top: 102px;
 }
 
-
 .newsweek-icon {
   filter: invert(1);
   width: 132px;
@@ -224,7 +223,6 @@ a.article-link {
   bottom: 0;
   left: 0;
   position: absolute;
-  /* z-index: 1; */
 }
 
 .mag-tag {
@@ -234,7 +232,6 @@ a.article-link {
   bottom: 40px;
   left: 0;
   position: absolute;
-  /* z-index: 1; */
 }
 
 .ep-tag {
@@ -244,7 +241,6 @@ a.article-link {
   bottom: 0;
   left: 0;
   position: absolute;
-  /* z-index: 1; */
 }
 
 .newsletter-signup {
@@ -292,11 +288,6 @@ a.article-link {
   position: absolute;
   left: 90px;
   top: 13px;
-}
-
-.ns-image {
-  width: 100%;
-  height: auto;
 }
 
 .vs-icon {
@@ -348,7 +339,6 @@ a.article-link {
   display: block;
   bottom: 61px;
   left: 15px;
-  /* z-index: 1; */
 }
 
 .mag-img {
@@ -495,7 +485,6 @@ a.article-link {
     bottom: 0;
     left: 0;
     position: absolute;
-    /* z-index: 1; */
   }
 
   .newsletter-heading {
