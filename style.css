@@ -503,17 +503,9 @@ a.article-link {
       ==============================================
  */
 
- .footer-border {
+.footer-border {
   border-top: 2px solid black;
   width: 100%;
-}
-
- .div-top {
-  font-family: "Lato", serif;
-  font-weight: 100;
-  font-size: 24px;
-  color: #333;
-
 }
 
 .footer-newsweek-icon {
