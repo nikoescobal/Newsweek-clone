@@ -290,8 +290,8 @@ a.article-link {
 .special-image {
   width: 100%;
   position: absolute;
-  left: 30px;
-  top: 20px;
+  left: 90px;
+  top: 13px;
 }
 
 .ns-image {
@@ -430,6 +430,13 @@ a.article-link {
     font-family: "Arimo", serif;
     font-size: 15px;
     color: #333;
+  }
+
+  .special-image {
+    width: 100%;
+    position: absolute;
+    left: 30px;
+    top: 23px;
   }
 
   .newsweek-icon {
