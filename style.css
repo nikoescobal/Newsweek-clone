@@ -540,5 +540,13 @@ i.fa-instagram-square::before,
 i.fa-tumblr::before,
 i.fa-linkedin-in::before {
   font-size: 22px;
-  color: #666;
+  opacity: 0.6;
+}
+
+i.fa-facebook-square:hover,
+i.fa-twitter:hover,
+i.fa-instagram-square:hover,
+i.fa-tumblr:hover,
+i.fa-linkedin-in:hover {
+  color: #3b5998;
 }
