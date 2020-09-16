@@ -113,6 +113,7 @@ i.fa-bars::before {
   font-family: "Lato", serif;
   font-weight: 100;
   font-size: 24px;
+  color: #666;
 }
 
 .bot-nav a {
@@ -313,11 +314,6 @@ a.article-link {
   border-top: solid 4px #e2e2e2;
 }
 
-.footer-border {
-  border-top: 2px solid black;
-  width: 100%;
-}
-
 .solid {
   margin: 0 -15px;
   border: 0;
@@ -506,6 +502,19 @@ a.article-link {
                   ****** FOOTER ******
       ==============================================
  */
+
+ .footer-border {
+  border-top: 2px solid black;
+  width: 100%;
+}
+
+ .div-top {
+  font-family: "Lato", serif;
+  font-weight: 100;
+  font-size: 24px;
+  color: #333;
+
+}
 
 .footer-newsweek-icon {
   fill: #f72210;
