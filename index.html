@@ -21,8 +21,9 @@
 </head>
 
 <body class="mx-auto">
-  <header class="position-relative">
-    <nav class="top-nav navbar bg-red py-3 py-md-3 py-sm-3 py-lg-4 pt-lg-4 pb-lg-3 justify-content-between">
+  <header>
+    <nav
+      class="fixed-top top-nav navbar bg-red py-3 py-md-3 py-sm-3 py-lg-4 pt-lg-4 pb-lg-3 justify-content-between">
       <div class="d-none d-lg-block">
         <div class="text-white mb-2">
           <img src="https://g.newsweek.com/img/weather/34.png" alt="Fair / Windy" class="weather-icon" />
@@ -55,46 +56,76 @@
       </div>
     </nav>
 
-    <nav class="d-none d-lg-flex mid-nav mt-3">
+    <nav class="d-none d-lg-flex mid-nav mt-3 mr-5 pr-5">
       <ul class="list-unstyled p-0 d-flex justify-content-between align-items-center">
         <li class="text-dark pl-3 text-nowrap">
-          <a class="border-right text-dark pr-3 font-weight-bold" href="#">U.S.</a>
+          <a class="text-dark text-center font-weight-bold" href="#">U.S.</a>
+        </li>
+        <li class="div-top">
+          &verbar;
         </li>
         <li class="text-nowrap">
-          <a class="border-right text-dark pr-3 font-weight-bold" href="#">World</a>
+          <a class="text-dark text-center font-weight-bold" href="#">World</a>
+        </li>
+        <li class="div-top">
+          &verbar;
         </li>
         <li class="text-nowrap">
-          <a class="border-right text-dark pr-3 font-weight-bold" href="#">Business</a>
+          <a class="text-dark text-center font-weight-bold" href="#">Business</a>
+        </li>
+        <li class="div-top">
+          &verbar;
         </li>
         <li class="text-nowrap">
-          <a class="border-right text-dark pr-3 font-weight-bold" href="#">Tech & Science</a>
+          <a class="text-dark text-center font-weight-bold" href="#">Tech & Science</a>
+        </li>
+        <li class="div-top">
+          &verbar;
         </li>
         <li class="text-nowrap">
-          <a class="border-right text-dark pr-3 font-weight-bold" href="#">Culture</a>
+          <a class="text-dark text-center font-weight-bold" href="#">Culture</a>
+        </li>
+        <li class="div-top">
+          &verbar;
         </li>
         <li class="text-nowrap">
-          <a class="border-right text-dark pr-3 font-weight-bold" href="#">Newsgeek</a>
+          <a class="text-dark text-center font-weight-bold" href="#">Newsgeek</a>
+        </li>
+        <li class="div-top">
+          &verbar;
         </li>
         <li class="text-nowrap">
-          <a class="border-right text-dark pr-3 font-weight-bold" href="#">Sports</a>
+          <a class="text-dark text-center font-weight-bold" href="#">Sports</a>
+        </li>
+        <li class="div-top">
+          &verbar;
         </li>
         <li class="text-nowrap">
-          <a class="border-right text-dark pr-3 font-weight-bold" href="#">Health</a>
+          <a class="text-dark text-center font-weight-bold" href="#">Health</a>
+        </li>
+        <li class="div-top">
+          &verbar;
         </li>
         <li class="text-nowrap">
-          <a class="border-right text-dark pr-3 font-weight-bold" href="#">The Debate</a>
+          <a class="text-dark text-center font-weight-bold" href="#">The Debate</a>
+        </li>
+        <li class="div-top">
+          &verbar;
         </li>
         <li class="text-nowrap">
-          <a class="border-right text-dark pr-3 font-weight-bold" href="#">Vantage</a>
+          <a class="text-dark text-center font-weight-bold" href="#">Vantage</a>
+        </li>
+        <li class="div-top">
+          &verbar;
         </li>
         <li class="text-nowrap">
-          <a class="text-dark pr-3 font-weight-bold" href="#">Weather</a>
+          <a class="text-dark text-center font-weight-bold" href="#">Weather</a>
+        </li>
+
+        <li class="text-secondary">Search</div>
+          <img class="ml-2" src="https://g.newsweek.com/www/images/icon-search-glass.svg" width="20" alt="search icon" />
         </li>
       </ul>
-      <div class="d-flex justify-content-start">
-        <div class="text-secondary d-flex align-items-center ml-lg-4 mr-lg-2 ml-xl-2 pb-3">Search</div>
-        <img class="pb-3" src="https://g.newsweek.com/www/images/icon-search-glass.svg" width="20" alt="search icon" />
-      </div>
     </nav>
 
     <nav class="bot-nav d-none d-lg-block border-0 border-left-0">
@@ -2343,63 +2374,99 @@
             <div class="footer-links border-top text-secondary">
               <div class="footer-language-options my-1">
                 <ul class="d-flex m-0">
-                  <li class="m-1 px-1">Editions:</li>
-                  <li class="m-1 px-1">
+                  <li class="px-1">Editions:</li>
+                  <li class="px-1">
                     <a class="text-secondary" href="#">U.S. Edition</a>
                   </li>
-                  <li class="m-1 px-1">
+                  <li class="px-1">
                     <a class="text-secondary" href="#">日本</a>
                   </li>
-                  <li class="m-1">
-                    <a class="text-secondary" href="#">Pakistan</a>
+                  <li class="px-1">
+                    <a class="text-secondary" href="#">Pakistan         </a>
                   </li>
-                  <li class="m-1">
+                  <li class="px-1">
                     <a class="text-secondary" href="#">Polska</a>
                   </li>
-                  <li class="m-1">
+                  <li class="px-1">
                     <a class="text-secondary" href="#">România</a>
                   </li>
                 </ul>
               </div>
               <ul class="menu text-wrap d-flex justify-content-start flex-wrap m-0">
-                <li class="m-1 px-1">
+                <li class="px-1">
                   <a class="text-secondary" href="#">About Us</a>
                 </li>
-                <li class="m-1 px-1">
+                <li class="font-weight-light text-secondary px-1">
+                  &verbar;
+                </li>
+                <li class="px-1">
                   <a class="text-secondary" href="#">Corrections</a>
                 </li>
-                <li class="m-1 px-1">
+                <li class="font-weight-light text-secondary px-1">
+                  &verbar;
+                </li>
+                <li class="px-1">
                   <a class="text-secondary" href="#">Contact Us</a>
                 </li>
-                <li class="m-1 px-1">
+                <li class="font-weight-light text-secondary px-1">
+                  &verbar;
+                </li>
+                <li class="px-1">
                   <a class="text-secondary" href="#">Editorial Guidelines</a>
                 </li>
-                <li class="m-1 px-1">
-                  <a href="#"></a>Advertise
+                <li class="font-weight-light text-secondary px-1">
+                  &verbar;
                 </li>
-                <li class="m-1 px-1">
-                  <a href="#"></a>Copyright
+                <li class="px-1">
+                  <a class="text-secondary" href="#">Advertise</a>
                 </li>
-                <li class="m-1 px-1">
-                  <a href="#"></a>Terms & Conditions
+                <li class="font-weight-light text-secondary px-1">
+                  &verbar;
                 </li>
-                <li class="m-1 px-1">
-                  <a href="#"></a>Privacy Policy
+                <li class="px-1">
+                  <a class="text-secondary" href="#">Copyright</a>
                 </li>
-                <li class="m-1 px-1">
-                  <a href="#"></a>Cookie Policy
+                <li class="font-weight-light text-secondary px-1">
+                  &verbar;
                 </li>
-                <li class="m-1 px-1">
-                  <a href="#"></a>Terms of Sale
+                <li class="px-1">
+                  <a class="text-secondary" href="#">Terms & Conditions</a>
                 </li>
-                <li class="m-1 px-1">
-                  <a href="#"></a>Archive
+                <li class="font-weight-light text-secondary px-1">
+                  &verbar;
                 </li>
-                <li class="m-1 px-1">
-                  <a href="#"></a>Announcements
+                <li class="px-1">
+                  <a class="text-secondary" href="#">Privacy Policy</a>
                 </li>
-                <li class="m-1 px-1">
-                  <a href="#"></a>Consent preferences
+                <li class="font-weight-light text-secondary px-1">
+                  &verbar;
+                </li>
+                <li class="px-1">
+                  <a class="text-secondary" href="#">Cookie Policy</a>
+                </li>
+                <li class="font-weight-light text-secondary px-1">
+                  &verbar;
+                </li>
+                <li class="px-1">
+                  <a class="text-secondary" href="#">Terms of Sale</a>
+                </li>
+                <li class="font-weight-light text-secondary px-1">
+                  &verbar;
+                </li>
+                <li class="px-1">
+                  <a class="text-secondary" href="#">Archive</a>
+                </li>
+                <li class="font-weight-light text-secondary px-1">
+                  &verbar;
+                </li>
+                <li class="px-1">
+                  <a class="text-secondary" href="#">Announcements</a>
+                </li>
+                <li class="font-weight-light text-secondary px-1">
+                  &verbar;
+                </li>
+                <li class="px-1">
+                  <a class="text-secondary" href="#">Consent preferences</a>
                 </li>
               </ul>
             </div>

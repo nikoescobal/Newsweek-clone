@@ -102,7 +102,13 @@ i.fa-bars::before {
 }
 
 .mid-nav ul {
-  width: 85%;
+  width: 100%;
+}
+
+.div-top {
+  font-family: "Lato", serif;
+  font-weight: 100;
+  font-size: 24px;
 }
 
 .bot-nav a {
@@ -213,7 +219,7 @@ a.article-link {
   bottom: 0;
   left: 0;
   position: absolute;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .mag-tag {
@@ -223,7 +229,7 @@ a.article-link {
   bottom: 40px;
   left: 0;
   position: absolute;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .ep-tag {
@@ -233,7 +239,7 @@ a.article-link {
   bottom: 0;
   left: 0;
   position: absolute;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .newsletter-signup {
@@ -325,7 +331,7 @@ a.article-link {
   display: block;
   bottom: 61px;
   left: 15px;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .mag-img {
@@ -472,7 +478,7 @@ a.article-link {
     bottom: 0;
     left: 0;
     position: absolute;
-    z-index: 1;
+    /* z-index: 1; */
   }
 
   .newsletter-heading {
@@ -515,6 +521,11 @@ a.article-link {
 .footer-links {
   font-size: 12.5px;
 }
+
+/* .footer-div {
+  font-weight: 100;
+  color: #666;
+} */
 
 .menu {
   width: 100%;
