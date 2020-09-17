@@ -150,6 +150,10 @@ i.fa-bars::before {
   color: #555;
 }
 
+.ns-image {
+  width: 100%;
+}
+
 .ms-images {
   width: 95px;
   height: 95px;
