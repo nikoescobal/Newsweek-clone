@@ -150,7 +150,7 @@ i.fa-bars::before {
   color: #555;
 }
 
-.ns-image {
+.ns-images {
   width: 100%;
 }
 
@@ -345,6 +345,11 @@ a.article-link {
   display: block;
   bottom: 61px;
   left: 15px;
+}
+
+.us-image {
+  width: 95px;
+  height: 95px;
 }
 
 .mag-img {
