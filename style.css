@@ -63,6 +63,12 @@ header {
   width: 100%;
 }
 
+.search-text {
+  font-family: "Lato", serif;
+  font-weight: 300;
+  font-size: 17px;
+}
+
 .mid-nav {
   padding-top: 102px;
 }
@@ -126,7 +132,7 @@ i.fa-bars::before {
 }
 
 .mid-nav ul a {
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .bot-nav li {
