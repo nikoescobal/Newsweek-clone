@@ -5,7 +5,7 @@ This project consists of replicating the Newsweek website with the Bootstrap 4 f
 - It is an exact replica of the [original page](https://imgur.com/a/jvAifdd).
 
 
-![newsweek-complete](https://user-images.githubusercontent.com/62937819/93362217-4ecc5780-f878-11ea-8148-77e47eadb509.jpg)
+![Newsweek-finished](https://user-images.githubusercontent.com/62937819/93609048-f1621300-f9fd-11ea-9258-946a442e4c62.jpg)
 
 
 ## Built with
@@ -24,7 +24,7 @@ git clone git@github.com:nikoescobal/newsweek-bootstrap-clone.git
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/nikoescobal/newsweek-bootstrap-clone/16ebf8d2043029aac9959f2f7fcae2b911bb07ed/index.html)
+[Live Demo Link](https://rawcdn.githack.com/nikoescobal/newsweek-bootstrap-clone/3dbdd56ee71858f8680acb794d5020271ce5a4f7/index.html)
 
 ## Author (Feel free to reach out. I'm always happy to connect :slightly_smiling_face:)
 
