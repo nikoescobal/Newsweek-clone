@@ -325,6 +325,10 @@ a.article-link {
     center no-repeat #f72210;
 }
 
+.border-thin {
+  border-top: solid 1px #e2e2e2;
+}
+
 .border-thick {
   border-top: solid 4px #e2e2e2;
 }
