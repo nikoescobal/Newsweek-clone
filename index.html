@@ -1,10 +1,3160 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arimo&family=Lato:wght@100;300;400;700&family=Roboto+Condensed:wght@400;700&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newsweek Clone</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+</head>
+
+<body class="mx-auto">
+  <header>
+    <nav class="fixed-top top-nav navbar bg-red py-3 py-md-3 py-sm-3 py-lg-4 pt-lg-4 pb-lg-3 justify-content-between">
+      <div class="d-none d-lg-block">
+        <div class="text-white mb-2">
+          <img src="https://g.newsweek.com/img/weather/34.png" alt="Fair / Windy" class="weather-icon" />
+          31° Makati, PH <i class="fas fa-chevron-right"></i>
+        </div>
+        <span class="text-white d-none d-lg-block ml-1">September 17, 2020</span>
+      </div>
+
+      <svg version="1.1" class="newsweek-icon" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60" xml:space="preserve">
+        <g>
+          <path class="st0"
+            d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7">
+          </path>
+        </g>
+      </svg>
+      <div class="d-flex align-items-center mt-lg-4">
+        <button type="button" class="login-btn text-uppercase text-white font-weight-bold pr-4 d-none d-md-block">
+          login
+        </button>
+        <div class="d-flex align-items-center">
+          <i class="fas fa-user fa-md pr-2 pr-sm-3 d-block d-md-none"></i>
+          <button type="button" class="subscribe-btn btn rounded-pill text-uppercase font-weight-bold">
+            subscribe <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <i class="pl-md-3 pl-sm-3 d-none d-block d-sm-block d-md-block d-lg-none pl-2 fa fa-bars fa-md"
+            aria-hidden="true"></i>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="d-none d-lg-flex mid-nav mt-3 mr-5 pr-5">
+      <ul class="list-unstyled p-0 mb-2 d-flex justify-content-between align-items-center">
+        <li class="text-dark pl-3 text-nowrap">
+          <a class="text-dark text-center font-weight-bold" href="#">U.S.</a>
+        </li>
+        <li class="div-top">
+          &verbar;
+        </li>
+        <li class="text-nowrap">
+          <a class="text-dark text-center font-weight-bold" href="#">World</a>
+        </li>
+        <li class="div-top">
+          &verbar;
+        </li>
+        <li class="text-nowrap">
+          <a class="text-dark text-center font-weight-bold" href="#">Business</a>
+        </li>
+        <li class="div-top">
+          &verbar;
+        </li>
+        <li class="text-nowrap">
+          <a class="text-dark text-center font-weight-bold" href="#">Tech & Science</a>
+        </li>
+        <li class="div-top">
+          &verbar;
+        </li>
+        <li class="text-nowrap">
+          <a class="text-dark text-center font-weight-bold" href="#">Culture</a>
+        </li>
+        <li class="div-top">
+          &verbar;
+        </li>
+        <li class="text-nowrap">
+          <a class="text-dark text-center font-weight-bold" href="#">Newsgeek</a>
+        </li>
+        <li class="div-top">
+          &verbar;
+        </li>
+        <li class="text-nowrap">
+          <a class="text-dark text-center font-weight-bold" href="#">Sports</a>
+        </li>
+        <li class="div-top">
+          &verbar;
+        </li>
+        <li class="text-nowrap">
+          <a class="text-dark text-center font-weight-bold" href="#">Health</a>
+        </li>
+        <li class="div-top">
+          &verbar;
+        </li>
+        <li class="text-nowrap">
+          <a class="text-dark text-center font-weight-bold" href="#">The Debate</a>
+        </li>
+        <li class="div-top">
+          &verbar;
+        </li>
+        <li class="text-nowrap">
+          <a class="text-dark text-center font-weight-bold" href="#">Vantage</a>
+        </li>
+        <li class="div-top">
+          &verbar;
+        </li>
+        <li class="text-nowrap">
+          <a class="text-dark text-center font-weight-bold" href="#">Weather</a>
+        </li>
+
+        <li class="text-secondary mb-1">
+          <a class="search-text" href="#">Search</a>
+          <img class="ml-2 mb-1" src="https://g.newsweek.com/www/images/icon-search-glass.svg" width="20"
+            alt="search icon" />
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="bot-nav d-none d-lg-block border-0 border-left-0">
+      <ul class="d-flex m-0 py-2 border">
+        <li>
+          <a class="text-uppercase text-dark font-weight-bold mx-4" href="#">trending</a>
+        </li>
+        <li>
+          <a class="text-uppercase text-secondary font-weight-bold mr-4" href="#">donald trump</a>
+        </li>
+        <li>
+          <a class="text-uppercase text-secondary font-weight-bold mr-4" href="#">joe biden</a>
+        </li>
+        <li>
+          <a class="text-uppercase text-secondary font-weight-bold mr-4" href="#">china</a>
+        </li>
+        <li>
+          <a class="text-uppercase text-secondary font-weight-bold mr-4" href="#">coronavirus</a>
+        </li>
+        <li>
+          <a class="text-uppercase text-secondary font-weight-bold mr-4" href="#">2020 election</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="main" class="container-fluid mx-auto">
+      <div class="row">
+        <!-- Top Story Section -->
+        <div class="top-story col-sm-12 col-md-7 col-lg-4 order-md-2 order-lg-2">
+          <h6
+            class="font-weight-bold text-uppercase text-secondary mt-4 pt-5 pt-md-5 mt-md-5 mb-md-2 mt-lg-0 pt-lg-4 pb-lg-0">
+            <a class="block-title" href="#"> top story </a>
+          </h6>
+          <article class="pb-2 pb-lg-0">
+            <a href="#">
+              <figure class="position-relative">
+                <img class="mt-1 mt-md-0 m-lg-0 m-xl-0 mb-lg-4 img-fluid"
+                  src="https://d.newsweek.com/en/full/1632109/2020-census.jpg?w=591&h=364&f=839a6fd0f92eb76f4b7c03de36b2a1f1"
+                  alt="2020 Census" />
+
+                <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1">
+                  U.S.
+                </figcaption>
+              </figure>
+            </a>
+            <div class="summary">
+              <h1 class="font-weight-bold">
+                <a href="#">
+                  As Judge Halts Census Wind Down, These States Have Lowest
+                  Response Rates
+                </a>
+              </h1>
+              <p>
+                Southeastern states Alabama and Georgia have the lowest
+                response rates so far for the 2020 census.
+              </p>
+            </div>
+          </article>
+          <div class="d-none d-md-block order-md-3">
+            <div class="my-turn position-relative">
+              <h6 class="font-weight-bold text-uppercase pt-1">
+                <a href="#" class="block-title">my turn</a>
+              </h6>
+              <div class="row">
+                <article class="col-4">
+                  <figure>
+                    <img class="img-fluid"
+                      src="https://d.newsweek.com/en/full/1634798/sailing-sea-family-family-life.jpg?w=397&h=397&f=69f943908cc70e6b15f9573937680333"
+                      alt="Sailing, Sea, Family, Family life " />
+                    <figcaption>
+                      <h6>
+                        <a class="d-block py-2 text-secondary font-weight-bold" href="#">'We're Raising Our Kids at Sea
+                          During Covid-19'</a>
+                      </h6>
+                    </figcaption>
+                  </figure>
+                </article>
+                <article class="col-4">
+                  <figure>
+                    <img class="img-fluid"
+                      src="https://d.newsweek.com/en/full/1634798/sailing-sea-family-family-life.jpg?w=397&h=397&f=69f943908cc70e6b15f9573937680333"
+                      alt="Sailing, Sea, Family, Family life " />
+                    <figcaption>
+                      <h6>
+                        <a class="d-block py-2 text-secondary font-weight-bold" href="#">'We're Raising Our Kids at Sea
+                          During Covid-19'</a>
+                      </h6>
+                    </figcaption>
+                  </figure>
+                </article>
+                <article class="col-4">
+                  <figure>
+                    <img class="img-fluid"
+                      src="https://d.newsweek.com/en/full/1634798/sailing-sea-family-family-life.jpg?w=397&h=397&f=69f943908cc70e6b15f9573937680333"
+                      alt="Sailing, Sea, Family, Family life " />
+                    <figcaption>
+                      <h6>
+                        <a class="d-block py-2 text-secondary font-weight-bold" href="#">'We're Raising Our Kids at Sea
+                          During Covid-19'</a>
+                      </h6>
+                    </figcaption>
+                  </figure>
+                </article>
+              </div>
+
+              <div class="culture-travel pt-3 order-md-4">
+                <h6 class="font-weight-bold text-uppercase">
+                  <a href="#" class="block-title">culture & travel</a>
+                </h6>
+                <div class="row">
+                  <article class="col-4">
+                    <figure class="position-relative">
+                      <img class="img-fluid"
+                        src="https://d.newsweek.com/en/full/1629368/rhinos.jpg?w=397&h=397&f=3cb0b41ecc22788d1da11563e61894b7"
+                        alt="Sailing, Sea, Family, Family life " />
+                      <p class="culture-tag font-weight-bold text-uppercase p-1 m-0"> rhino poaching </p>
+                    </figure>
+                    <h6>
+                      <a class="d-block pb-2 m-0 text-secondary font-weight-bold" href="#">The Last Two Northern White
+                        Rhinos—and The Armed Guard Who Protects Them</a>
+                    </h6>
+                  </article>
+
+                  <article class="col-4">
+                    <figure class="position-relative">
+                      <img class="  img-fluid"
+                        src="https://d.newsweek.com/en/full/1629368/rhinos.jpg?w=397&h=397&f=3cb0b41ecc22788d1da11563e61894b7"
+                        alt="Sailing, Sea, Family, Family life " />
+                      <p class="culture-tag font-weight-bold text-uppercase p-1 m-0"> rhino poaching </p>
+                    </figure>
+                    <h6>
+                      <a class="d-block pb-2 m-0 text-secondary font-weight-bold" href="#">The Last Two Northern White
+                        Rhinos—and The Armed Guard Who Protects Them</a>
+                    </h6>
+                  </article>
+
+                  <article class="col-4">
+                    <figure class="position-relative">
+                      <img class="img-fluid"
+                        src="https://d.newsweek.com/en/full/1629368/rhinos.jpg?w=397&h=397&f=3cb0b41ecc22788d1da11563e61894b7"
+                        alt="Sailing, Sea, Family, Family life " />
+                      <p class="culture-tag font-weight-bold text-uppercase p-1 m-0"> rhino poaching </p>
+                    </figure>
+                    <h6>
+                      <a class="d-block pb-2 m-0 text-secondary font-weight-bold" href="#">The Last Two Northern White
+                        Rhinos—and The Armed Guard Who Protects Them</a>
+                    </h6>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <div class="more-stories position-relative order-md-5">
+              <h6 class="font-weight-bold text-uppercase mt-md-3 pb-3 pb-md-2 border-bottom">
+                <a href="#" class="block-title">more stories</a>
+              </h6>
+
+              <article class="border-bottom">
+                <figure class="d-flex m-0 pb-3 pt-2">
+                  <img class="ms-images img-fluid"
+                    src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                    alt="For hire shop sign" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                        Unemployment Picture</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 pt-1">
+                        Figures released this month show that 11.5 million
+                        people who lost their jobs from the coronavirus
+                        pandemic are still out of work.
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="border-bottom pt-3">
+                <figure class="d-flex m-0 pb-3">
+                  <img class="ms-images img-fluid"
+                    src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                    alt="For hire shop sign" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                        Unemployment Picture</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 pt-1">
+                        Figures released this month show that 11.5 million
+                        people who lost their jobs from the coronavirus
+                        pandemic are still out of work.
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="border-bottom pt-3">
+                <figure class="d-flex m-0 pb-3">
+                  <img class="ms-images img-fluid"
+                    src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                    alt="For hire shop sign" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                        Unemployment Picture</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 pt-1">
+                        Figures released this month show that 11.5 million
+                        people who lost their jobs from the coronavirus
+                        pandemic are still out of work.
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="border-bottom pt-3">
+                <figure class="d-flex m-0 pb-3">
+                  <img class="ms-images img-fluid"
+                    src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                    alt="For hire shop sign" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                        Unemployment Picture</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 pt-1">
+                        Figures released this month show that 11.5 million
+                        people who lost their jobs from the coronavirus
+                        pandemic are still out of work.
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="border-bottom pt-3">
+                <figure class="d-flex m-0 pb-3">
+                  <img class="ms-images img-fluid"
+                    src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                    alt="For hire shop sign" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                        Unemployment Picture</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 pt-1">
+                        Figures released this month show that 11.5 million
+                        people who lost their jobs from the coronavirus
+                        pandemic are still out of work.
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="border-bottom pt-3">
+                <figure class="d-flex m-0 pb-3">
+                  <img class="ms-images img-fluid"
+                    src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                    alt="For hire shop sign" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                        Unemployment Picture</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 pt-1">
+                        Figures released this month show that 11.5 million
+                        people who lost their jobs from the coronavirus
+                        pandemic are still out of work.
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="border-bottom pt-3">
+                <figure class="d-flex m-0 pb-3">
+                  <img class="ms-images img-fluid"
+                    src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                    alt="For hire shop sign" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                        Unemployment Picture</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 pt-1">
+                        Figures released this month show that 11.5 million
+                        people who lost their jobs from the coronavirus
+                        pandemic are still out of work.
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="border-bottom pt-3">
+                <figure class="d-flex m-0 pb-3">
+                  <img class="ms-images img-fluid"
+                    src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                    alt="For hire shop sign" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                        Unemployment Picture</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 pt-1">
+                        Figures released this month show that 11.5 million
+                        people who lost their jobs from the coronavirus
+                        pandemic are still out of work.
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="border-bottom pt-3">
+                <figure class="d-flex m-0 pb-3">
+                  <img class="ms-images img-fluid"
+                    src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                    alt="For hire shop sign" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                        Unemployment Picture</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 pt-1">
+                        Figures released this month show that 11.5 million
+                        people who lost their jobs from the coronavirus
+                        pandemic are still out of work.
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="border-bottom pt-3">
+                <figure class="d-flex m-0 pb-3">
+                  <img class="ms-images img-fluid"
+                    src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                    alt="For hire shop sign" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                        Unemployment Picture</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 pt-1">
+                        Figures released this month show that 11.5 million
+                        people who lost their jobs from the coronavirus
+                        pandemic are still out of work.
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="border-bottom pt-3">
+                <figure class="d-flex m-0 pb-3">
+                  <img class="ms-images img-fluid"
+                    src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                    alt="For hire shop sign" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                        Unemployment Picture</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 pt-1">
+                        Figures released this month show that 11.5 million
+                        people who lost their jobs from the coronavirus
+                        pandemic are still out of work.
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="pt-3">
+                <figure class="d-flex m-0 pb-3">
+                  <img class="ms-images img-fluid"
+                    src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                    alt="For hire shop sign" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                        Unemployment Picture</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 pt-1">
+                        Figures released this month show that 11.5 million
+                        people who lost their jobs from the coronavirus
+                        pandemic are still out of work.
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+            </div>
+
+            <div class="my-turn order-4 position-relative d-md-none pt-4">
+              <h6 class="font-weight-bold text-uppercase pt-3">
+                <a href="#" class="block-title">my turn</a>
+              </h6>
+              <article>
+                <figure>
+                  <img class="  img-fluid"
+                    src="https://d.newsweek.com/en/full/1634798/sailing-sea-family-family-life.jpg?w=397&h=397&f=69f943908cc70e6b15f9573937680333"
+                    alt="Sailing, Sea, Family, Family life " />
+                  <figcaption>
+                    <h6>
+                      <a class="d-block py-2 text-secondary font-weight-bold" href="#">'We're Raising Our Kids at Sea
+                        During Covid-19'</a>
+                    </h6>
+                  </figcaption>
+                </figure>
+              </article>
+              <article>
+                <figure>
+                  <img class="  img-fluid"
+                    src="https://d.newsweek.com/en/full/1634798/sailing-sea-family-family-life.jpg?w=397&h=397&f=69f943908cc70e6b15f9573937680333"
+                    alt="Sailing, Sea, Family, Family life " />
+                  <figcaption>
+                    <h6>
+                      <a class="d-block py-2 text-secondary font-weight-bold" href="#">'We're Raising Our Kids at Sea
+                        During Covid-19'</a>
+                    </h6>
+                  </figcaption>
+                </figure>
+              </article>
+              <article>
+                <figure>
+                  <img class="  img-fluid"
+                    src="https://d.newsweek.com/en/full/1634798/sailing-sea-family-family-life.jpg?w=397&h=397&f=69f943908cc70e6b15f9573937680333"
+                    alt="Sailing, Sea, Family, Family life " />
+                  <figcaption>
+                    <h6>
+                      <a class="d-block py-2 text-secondary font-weight-bold" href="#">'We're Raising Our Kids at Sea
+                        During Covid-19'</a>
+                    </h6>
+                  </figcaption>
+                </figure>
+              </article>
+
+              <h6 class="font-weight-bold text-uppercase pt-3">
+                <a href="#" class="block-title">culture & travel</a>
+              </h6>
+
+              <article>
+                <figure class="position-relative">
+                  <img class="  img-fluid"
+                    src="https://d.newsweek.com/en/full/1629368/rhinos.jpg?w=397&h=397&f=3cb0b41ecc22788d1da11563e61894b7"
+                    alt="Sailing, Sea, Family, Family life " />
+
+                  <p class="culture-tag font-weight-bold text-uppercase p-1 m-0">
+                    rhino poaching
+                  </p>
+                  <h6>
+                    <a class="d-block pb-2 m-0 text-secondary font-weight-bold" href="#">The Last Two Northern White
+                      Rhinos—and The Armed Guard
+                      Who Protects Them</a>
+                  </h6>
+                </figure>
+              </article>
+              <article>
+                <figure class="position-relative">
+                  <img class="  img-fluid"
+                    src="https://d.newsweek.com/en/full/1629368/rhinos.jpg?w=397&h=397&f=3cb0b41ecc22788d1da11563e61894b7"
+                    alt="Sailing, Sea, Family, Family life " />
+                  <figcaption>
+                    <a class="d-block pb-2 m-0 text-secondary font-weight-bold" href="#">The Last Two Northern White
+                      Rhinos—and The Armed Guard
+                      Who Protects Them</a>
+                    <h6>
+                      <a class="d-block pb-2 m-0 text-secondary font-weight-bold" href="#">The Last Two Northern White
+                        Rhinos—and The Armed Guard
+                        Who Protects Them</a>
+                    </h6>
+                  </figcaption>
+                </figure>
+              </article>
+              <article>
+                <figure class="position-relative">
+                  <img class="  img-fluid"
+                    src="https://d.newsweek.com/en/full/1629368/rhinos.jpg?w=397&h=397&f=3cb0b41ecc22788d1da11563e61894b7"
+                    alt="Sailing, Sea, Family, Family life " />
+                  <figcaption>
+                    <a class="d-block py-2 mb-3 text-secondary font-weight-bold" href="#">The Last Two Northern White
+                      Rhinos—and The Armed Guard
+                      Who Protects Them</a>
+                    <h6>
+                      <a class="d-block pb-2 m-0 text-secondary font-weight-bold" href="#">The Last Two Northern White
+                        Rhinos—and The Armed Guard
+                        Who Protects Them</a>
+                    </h6>
+                  </figcaption>
+                </figure>
+              </article>
+            </div>
+          </div>
+        </div>
+        <!-- Featured Stories Section -->
+        <div class="featured-stories position-relative col-sm-12 col-md-5 col-lg-4 order-md-1 order-lg-1">
+          <h6 class="font-weight-bold text-uppercase mt-md-5 pt-3 pt-md-5 mt-3 mt-lg-0 pt-lg-4">
+            <a class="block-title" href="#"> featured stories </a>
+          </h6>
+
+          <article>
+            <a href="#">
+              <figure class="position-relative">
+                <img class="mt-lg-0 m-xl-0 img-fluid"
+                  src="https://d.newsweek.com/en/full/1632249/usps-dejoy-congressional-hearing-august-2020.jpg?w=397&h=265&q=90&f=8b3ec0c676cf0533f9c319bec5a34167"
+                  alt="usps dejoy congressional hearing august 2020" />
+
+                <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1">
+                  U.S.
+                </figcaption>
+              </figure>
+            </a>
+            <div class="summary">
+              <h2 class="font-weight-bold">
+                <a href="#">Trump Says DeJoy Should Lose His Job if Campaign Finance
+                  Allegations Proven</a>
+              </h2>
+              <p>
+                The Washington Post reported that former employees of Louis
+                DeJoy were pressured to donate to Republican candidates and
+                then reimbursed through bonuses.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <a href="#">
+              <figure class="position-relative">
+                <img
+                  src="https://d.newsweek.com/en/full/1634716/mitch-mcconnell.jpg?w=397&h=265&q=90&f=4330d5c1acad690c71f9297751296fe4"
+                  alt="Mitch McConnell" class="img-fluid" />
+
+                <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1 text-uppercase">
+                  politics
+                </figcaption>
+              </figure>
+            </a>
+            <div class="summary">
+              <h2 class="font-weight-bold">
+                <a href="#">Dems Poised to Kill 'Skinny' GOP Stimulus as Republicans
+                  Corral Support</a>
+              </h2>
+              <p>
+                Senate Republicans will try to advance their slimmest
+                coronavirus stimulus to-date, a roughly $500 billion proposal
+                that Democrats will be able to block because of the 60 votes
+                needed to advance the bill to final passage.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <a href="#">
+              <figure class="position-relative">
+                <img
+                  src="https://d.newsweek.com/en/full/1634779/trump.jpg?w=397&h=265&q=90&f=9e4b70ff6f749da37890ebf2f247e867"
+                  alt="Mitch McConnell" class="img-fluid" />
+
+                <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1 text-uppercase">
+                  politics
+                </figcaption>
+              </figure>
+            </a>
+            <div class="summary">
+              <h2 class="font-weight-bold">
+                <a href="#">Trump Agreed to 18 Woodward Interviews Despite Calling Him
+                  'Dem Operative'</a>
+              </h2>
+              <p>
+                The president criticized a previous book by the journalist,
+                prior to agreeing to several interviews for his latest
+                release.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <a href="#">
+              <figure class="position-relative">
+                <img
+                  src="https://d.newsweek.com/en/full/1634786/temperature-heat-sky-hot-thermometer-getty-stock.jpg?w=397&h=265&q=90&f=48ec19d7230300fa850fbfc4b2f856ab"
+                  alt="temperature, heat, sky, hot, thermometer, getty, stock" class="img-fluid" />
+
+                <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1 text-uppercase">
+                  health
+                </figcaption>
+              </figure>
+            </a>
+            <div class="summary">
+              <h2 class="font-weight-bold">
+                <a href="#">These Four U.S. States Have Had Their Hottest Summer on
+                  Record</a>
+              </h2>
+              <p>
+                The majority of the lower 48 had "above" to "much above"
+                average temperatures this summer.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <a href="#">
+              <figure class="position-relative">
+                <img
+                  src="https://d.newsweek.com/en/full/1634785/donald-trump-diplomatic-reception-room.jpg?w=397&h=265&q=90&f=38a703b82591c10416fbed7c17a348c8"
+                  alt="Donald Trump in Diplomatic Reception Room" class="img-fluid" />
+
+                <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1">
+                  U.S.
+                </figcaption>
+              </figure>
+            </a>
+            <div class="summary">
+              <h2 class="font-weight-bold">
+                <a href="#">Four Key Takeaways From Bob Woodward's Trump Book 'Rage'</a>
+              </h2>
+              <p>
+                The veteran journalist's new book unveils fresh details about
+                Trump's pandemic response and relationship with Kim Jong Un.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <a href="#">
+              <figure class="position-relative">
+                <img
+                  src="https://d.newsweek.com/en/full/1634815/oregon-wildfires.jpg?w=397&h=265&q=90&f=2c5a52c783cb5d04b06333ab7b96a0c4"
+                  alt="Oregon wildfires" class="img-fluid" />
+
+                <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1 text-uppercase">
+                  u.s.
+                </figcaption>
+              </figure>
+            </a>
+            <div class="summary">
+              <h2 class="font-weight-bold">
+                <a href="#">Oregon Fire Satellite Images From Almeda Blaze Show
+                  Widespread Devastation</a>
+              </h2>
+              <p>
+                "It's almost a complete disaster," said Chris Luz, the mayor
+                of Phoenix, Oregon.
+              </p>
+            </div>
+          </article>
+
+          <div class="the-debate order-3 position-relative mt-3 pt-3 d-md-none">
+            <h6 class="font-weight-bold text-uppercase pt-3 mt-2">
+              <a class="block-title" href="#"> the debate</a>
+            </h6>
+
+            <div class="border-thick"></div>
+
+            <article class="pb-sm-4">
+              <figure class="d-flex m-0 py-3 align-items-center">
+                <img
+                  src="https://d.newsweek.com/en/full/1617877/john-r-lott-jr.png?w=150&h=150&f=d142ae49fe0538759f9d1ffcc7244505"
+                  alt="John R. Lott, Jr." class="author-profile img-fluid" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">America's Very Right to Keep and Bear Arms Is on the
+                      Ballot This Election</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="text-uppercase m-0">
+                      by
+                      <span class="font-weight-bold"> John R. Lott, JR.</span>
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <div class="special-border position-relative"></div>
+
+              <div class="vs-icon rounded-circle text-uppercase text-center pt-2">
+                vs
+              </div>
+
+              <figure class="d-flex flex-row-reverse m-0 py-3 align-items-center justify-content-between">
+                <img
+                  src="https://d.newsweek.com/en/full/1617877/john-r-lott-jr.png?w=150&h=150&f=d142ae49fe0538759f9d1ffcc7244505"
+                  alt="John R. Lott, Jr." class="author-profile img-fluid" />
+                <figcaption class="pr-1">
+                  <a class="font-weight-bold" href="#">Americans' Very Right to Keep and Bear Arms Is on the
+                    Ballot This Election</a>
+                  <div class="author-name">
+                    <p class="text-uppercase m-0">
+                      by
+                      <span class="font-weight-bold"> John R. Lott, JR.</span>
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <div class="border-thick"></div>
+            </article>
+          </div>
+
+          <div class="opinion order-4 position-relative d-md-none pt-4 ">
+            <h6 class="font-weight-bold text-uppercase pt-3">
+              <a href="#" class="block-title">opinion</a>
+            </h6>
+            <article class="border-bottom">
+              <figure class="d-flex m-0 pb-3 pt-1 align-items-center">
+                <img class="author-profile img-fluid"
+                  src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                  alt="gifty-anna" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                      Us, It Has to Change</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 text-uppercase font-weight-bold">
+                      by anna gifty opoku-agyeman
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3 align-items-center">
+                <img class="author-profile img-fluid"
+                  src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                  alt="gifty-anna" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                      Us, It Has to Change</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 text-uppercase font-weight-bold">
+                      by anna gifty opoku-agyeman
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3 align-items-center">
+                <img class="author-profile img-fluid"
+                  src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                  alt="gifty-anna" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                      Us, It Has to Change</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 text-uppercase font-weight-bold">
+                      by anna gifty opoku-agyeman
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3 align-items-center">
+                <img class="author-profile img-fluid"
+                  src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                  alt="gifty-anna" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                      Us, It Has to Change</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 text-uppercase font-weight-bold">
+                      by anna gifty opoku-agyeman
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3 align-items-center">
+                <img class="author-profile img-fluid"
+                  src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                  alt="gifty-anna" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                      Us, It Has to Change</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 text-uppercase font-weight-bold">
+                      by anna gifty opoku-agyeman
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="pt-3">
+              <figure class="d-flex m-0 pb-3 align-items-center">
+                <img class="author-profile img-fluid"
+                  src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                  alt="gifty-anna" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                      Us, It Has to Change</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 text-uppercase font-weight-bold">
+                      by anna gifty opoku-agyeman
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+        </div>
+
+        <!-- The Debate Section -->
+        <div class="d-none d-lg-block col-lg-4 order-md-3">
+          <div>
+            <div class="the-debate position-relative mt-md-4 pb-md-1">
+              <h6 class="font-weight-bold text-uppercase pt-3 pt-md-0">
+                <a class="block-title" href="#"> the debate</a>
+              </h6>
+
+              <div class="border-thick"></div>
+
+              <article>
+                <figure class="d-flex m-0 py-3 align-items-center">
+                  <img
+                    src="https://d.newsweek.com/en/full/1617877/john-r-lott-jr.png?w=150&h=150&f=d142ae49fe0538759f9d1ffcc7244505"
+                    alt="John R. Lott, Jr." class="author-profile img-fluid" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Americans' Very Right to Keep and Bear Arms Is on the
+                        Ballot This Election</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="text-uppercase m-0">
+                        by
+                        <span class="font-weight-bold">
+                          John R. Lott, JR.</span>
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+
+                <div class="special-border position-relative"></div>
+
+                <div class="vs-icon rounded-circle text-uppercase text-center pt-2">
+                  vs
+                </div>
+
+                <figure class="d-flex flex-row-reverse m-0 py-3 align-items-center justify-content-between">
+                  <img
+                    src="https://d.newsweek.com/en/full/1617877/john-r-lott-jr.png?w=150&h=150&f=d142ae49fe0538759f9d1ffcc7244505"
+                    alt="John R. Lott, Jr." class="author-profile img-fluid" />
+                  <figcaption class="pr-1">
+                    <a class="font-weight-bold" href="#">Americans' Very Right to Keep and Bear Arms Is on the
+                      Ballot This Election</a>
+                    <div class="author-name">
+                      <p class="text-uppercase m-0">
+                        by
+                        <span class="font-weight-bold">
+                          John R. Lott, JR.</span>
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+
+                <div class="border-thick"></div>
+              </article>
+            </div>
+
+            <div class="opinion position-relative pt-md-4">
+              <h6 class="font-weight-bold text-uppercase pt-3">
+                <a href="#" class="block-title">opinion</a>
+              </h6>
+              <article class="border-bottom">
+                <figure class="d-flex m-0 pb-3 pt-1 align-items-center">
+                  <img class="author-profile img-fluid"
+                    src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                    alt="gifty-anna" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                        Us, It Has to Change</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 text-uppercase font-weight-bold">
+                        by anna gifty opoku-agyeman
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="border-bottom pt-3">
+                <figure class="d-flex m-0 pb-3 align-items-center">
+                  <img class="author-profile img-fluid"
+                    src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                    alt="gifty-anna" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                        Us, It Has to Change</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 text-uppercase font-weight-bold">
+                        by anna gifty opoku-agyeman
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="border-bottom pt-3">
+                <figure class="d-flex m-0 pb-3 align-items-center">
+                  <img class="author-profile img-fluid"
+                    src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                    alt="gifty-anna" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                        Us, It Has to Change</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 text-uppercase font-weight-bold">
+                        by anna gifty opoku-agyeman
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="border-bottom pt-3">
+                <figure class="d-flex m-0 pb-3 align-items-center">
+                  <img class="author-profile img-fluid"
+                    src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                    alt="gifty-anna" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                        Us, It Has to Change</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 text-uppercase font-weight-bold">
+                        by anna gifty opoku-agyeman
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="border-bottom pt-3">
+                <figure class="d-flex m-0 pb-3 align-items-center">
+                  <img class="author-profile img-fluid"
+                    src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                    alt="gifty-anna" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                        Us, It Has to Change</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 text-uppercase font-weight-bold">
+                        by anna gifty opoku-agyeman
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+              <article class="pt-3">
+                <figure class="d-flex m-0 pb-3 align-items-center">
+                  <img class="author-profile img-fluid"
+                    src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                    alt="gifty-anna" />
+                  <figcaption class="pl-3">
+                    <h6>
+                      <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                        Us, It Has to Change</a>
+                    </h6>
+                    <div class="author-name">
+                      <p class="m-0 text-uppercase font-weight-bold">
+                        by anna gifty opoku-agyeman
+                      </p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+            </div>
+
+            <div class="newsletter-signup card w-100 bg-light">
+              <div class="card-body p-0">
+                <div class="flex">
+                  <div class="d-flex">
+                    <span class="icon-n mr-2"></span>
+                    <h6 class="card-title text-uppercase font-weight-bold">
+                      Start your day with our top 5 articles
+                    </h6>
+                  </div>
+                </div>
+                <form>
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email Address" />
+                  </div>
+                </form>
+                <a href="#" class="container-fluid btn bg-red text-white text-uppercase font-weight-bold">free sign up
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-positioning position-relative border-div">
+
+        </div>
+        <!-- More Stories Section (small) -->
+        <div class="col-sm-12 d-md-none">
+          <div class="more-stories m-0 pt-4 mb-1 order-4 position-relative">
+            <h6 class="font-weight-bold text-uppercase py-3 border-bottom">
+              <a href="#" class="block-title">more stories</a>
+            </h6>
+
+            <article class="border-bottom">
+              <figure class="d-flex m-0 pb-3 pt-2">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                  alt="For hire shop sign" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                      Unemployment Picture</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 pt-1">
+                      Figures released this month show that 11.5 million
+                      people who lost their jobs from the coronavirus pandemic
+                      are still out of work.
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                  alt="For hire shop sign" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                      Unemployment Picture</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 pt-1">
+                      Figures released this month show that 11.5 million
+                      people who lost their jobs from the coronavirus pandemic
+                      are still out of work.
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                  alt="For hire shop sign" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                      Unemployment Picture</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 pt-1">
+                      Figures released this month show that 11.5 million
+                      people who lost their jobs from the coronavirus pandemic
+                      are still out of work.
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                  alt="For hire shop sign" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                      Unemployment Picture</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 pt-1">
+                      Figures released this month show that 11.5 million
+                      people who lost their jobs from the coronavirus pandemic
+                      are still out of work.
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                  alt="For hire shop sign" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                      Unemployment Picture</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 pt-1">
+                      Figures released this month show that 11.5 million
+                      people who lost their jobs from the coronavirus pandemic
+                      are still out of work.
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                  alt="For hire shop sign" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                      Unemployment Picture</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 pt-1">
+                      Figures released this month show that 11.5 million
+                      people who lost their jobs from the coronavirus pandemic
+                      are still out of work.
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                  alt="For hire shop sign" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                      Unemployment Picture</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 pt-1">
+                      Figures released this month show that 11.5 million
+                      people who lost their jobs from the coronavirus pandemic
+                      are still out of work.
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                  alt="For hire shop sign" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                      Unemployment Picture</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 pt-1">
+                      Figures released this month show that 11.5 million
+                      people who lost their jobs from the coronavirus pandemic
+                      are still out of work.
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                  alt="For hire shop sign" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                      Unemployment Picture</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 pt-1">
+                      Figures released this month show that 11.5 million
+                      people who lost their jobs from the coronavirus pandemic
+                      are still out of work.
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                  alt="For hire shop sign" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                      Unemployment Picture</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 pt-1">
+                      Figures released this month show that 11.5 million
+                      people who lost their jobs from the coronavirus pandemic
+                      are still out of work.
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                  alt="For hire shop sign" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                      Unemployment Picture</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 pt-1">
+                      Figures released this month show that 11.5 million
+                      people who lost their jobs from the coronavirus pandemic
+                      are still out of work.
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="pt-3">
+              <figure class="d-flex m-0 pb-3">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1635179/hire-shop-sign.jpg?w=95&h=95&f=e9cc589152632fd9ea5b5a3ad26c2964"
+                  alt="For hire shop sign" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Trump's 10.6 Million Jobs Stat Masks a Complex, Weak
+                      Unemployment Picture</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 pt-1">
+                      Figures released this month show that 11.5 million
+                      people who lost their jobs from the coronavirus pandemic
+                      are still out of work.
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+
+          <div class="my-turn order-4 position-relative d-md-none pt-4">
+            <h6 class="font-weight-bold text-uppercase pt-3">
+              <a href="#" class="block-title">my turn</a>
+            </h6>
+            <article>
+              <figure>
+                <img class="  img-fluid"
+                  src="https://d.newsweek.com/en/full/1634798/sailing-sea-family-family-life.jpg?w=397&h=397&f=69f943908cc70e6b15f9573937680333"
+                  alt="Sailing, Sea, Family, Family life " />
+                <figcaption>
+                  <h6>
+                    <a class="d-block py-2 text-secondary font-weight-bold" href="#">'We're Raising Our Kids at Sea
+                      During
+                      Covid-19'</a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+            <article>
+              <figure>
+                <img class="  img-fluid"
+                  src="https://d.newsweek.com/en/full/1634798/sailing-sea-family-family-life.jpg?w=397&h=397&f=69f943908cc70e6b15f9573937680333"
+                  alt="Sailing, Sea, Family, Family life " />
+                <figcaption>
+                  <h6>
+                    <a class="d-block py-2 text-secondary font-weight-bold" href="#">'We're Raising Our Kids at Sea
+                      During
+                      Covid-19'</a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+            <article>
+              <figure>
+                <img class="  img-fluid"
+                  src="https://d.newsweek.com/en/full/1634798/sailing-sea-family-family-life.jpg?w=397&h=397&f=69f943908cc70e6b15f9573937680333"
+                  alt="Sailing, Sea, Family, Family life " />
+                <figcaption>
+                  <h6>
+                    <a class="d-block pt-2 pb-1 text-secondary font-weight-bold" href="#">'We're Raising Our Kids at Sea
+                      During Covid-19'</a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+
+            <h6 class="font-weight-bold text-uppercase pt-3">
+              <a href="#" class="block-title">culture & travel</a>
+            </h6>
+
+            <article>
+              <figure class="position-relative"> <img class="  img-fluid"
+                  src="https://d.newsweek.com/en/full/1629368/rhinos.jpg?w=397&h=397&f=3cb0b41ecc22788d1da11563e61894b7"
+                  alt="Sailing, Sea, Family, Family life " />
+                <p class="culture-tag font-weight-bold text-uppercase p-1 m-0"> rhino poaching </p>
+              </figure>
+              <h6>
+                <a class="d-block pb-2 m-0 text-secondary font-weight-bold" href="#">The Last Two Northern White
+                  Rhinos—and The Armed Guard Who Protects Them</a>
+              </h6>
+            </article>
+            <article>
+              <figure class="position-relative"> <img class="  img-fluid"
+                  src="https://d.newsweek.com/en/full/1629368/rhinos.jpg?w=397&h=397&f=3cb0b41ecc22788d1da11563e61894b7"
+                  alt="Sailing, Sea, Family, Family life " />
+                <p class="culture-tag font-weight-bold text-uppercase p-1 m-0"> rhino poaching </p>
+              </figure>
+              <h6>
+                <a class="d-block pb-2 m-0 text-secondary font-weight-bold" href="#">The Last Two Northern White
+                  Rhinos—and The Armed Guard Who Protects Them</a>
+              </h6>
+            </article>
+            <article>
+              <figure class="position-relative"> <img class="  img-fluid"
+                  src="https://d.newsweek.com/en/full/1629368/rhinos.jpg?w=397&h=397&f=3cb0b41ecc22788d1da11563e61894b7"
+                  alt="Sailing, Sea, Family, Family life " />
+                <p class="culture-tag font-weight-bold text-uppercase p-1 m-0"> rhino poaching </p>
+              </figure>
+              <h6>
+                <a class="d-block pb-2 m-0 text-secondary font-weight-bold" href="#">The Last Two Northern White
+                  Rhinos—and The Armed Guard Who Protects Them</a>
+              </h6>
+            </article>
+          </div>
+
+          <div class="newsletter-signup card w-100 bg-light">
+            <div class="card-body p-0">
+              <div class="flex">
+                <div class="d-flex">
+                  <span class="icon-n mr-2"></span>
+                  <h6 class="card-title text-uppercase font-weight-bold">
+                    Start your day with our top 5 articles
+                  </h6>
+                </div>
+              </div>
+              <form>
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Email Address" />
+                </div>
+              </form>
+              <a href="#" class="container-fluid btn bg-red text-white text-uppercase font-weight-bold">free sign up <i
+                  class="fas fa-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Debate Section (medium) -->
+        <div class="d-none d-md-block col-md-12 d-lg-none">
+          <div class="the-debate position-relative order-md-6 pt-md-3">
+            <h6 class="font-weight-bold text-uppercase pt-2 pt-md-0">
+              <a class="block-title" href="#"> the debate</a>
+            </h6>
+
+            <div class="border-thick"></div>
+
+            <article>
+              <figure class="d-flex m-0 py-3 align-items-center">
+                <img
+                  src="https://d.newsweek.com/en/full/1617877/john-r-lott-jr.png?w=150&h=150&f=d142ae49fe0538759f9d1ffcc7244505"
+                  alt="John R. Lott, Jr." class="author-profile img-fluid" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Americans' Very Right to Keep and Bear Arms Is on the
+                      Ballot This Election</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="text-uppercase m-0">
+                      by
+                      <span class="font-weight-bold"> John R. Lott, JR.</span>
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <div class="special-border position-relative"></div>
+
+              <div class="vs-icon rounded-circle text-uppercase text-center pt-2">
+                vs
+              </div>
+
+              <figure class="d-flex flex-row-reverse m-0 py-3 align-items-center justify-content-between">
+                <img
+                  src="https://d.newsweek.com/en/full/1617877/john-r-lott-jr.png?w=150&h=150&f=d142ae49fe0538759f9d1ffcc7244505"
+                  alt="John R. Lott, Jr." class="author-profile img-fluid" />
+                <figcaption class="pr-1">
+                  <a class="font-weight-bold" href="#">Americans' Very Right to Keep and Bear Arms Is on the
+                    Ballot This Election</a>
+                  <div class="author-name">
+                    <p class="text-uppercase m-0">
+                      by
+                      <span class="font-weight-bold"> John R. Lott, JR.</span>
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+
+              <div class="border-thick"></div>
+            </article>
+          </div>
+
+          <div class="opinion position-relative pt-3 order-md-7 pt-md-4">
+            <h6 class="font-weight-bold text-uppercase pt-3 pt-md-2">
+              <a href="#" class="block-title">opinion</a>
+            </h6>
+            <article class="border-bottom">
+              <figure class="d-flex m-0 pb-3 pt-1 align-items-center">
+                <img class="author-profile img-fluid"
+                  src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                  alt="gifty-anna" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                      Us, It Has to Change</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 text-uppercase font-weight-bold">
+                      by anna gifty opoku-agyeman
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3 align-items-center">
+                <img class="author-profile img-fluid"
+                  src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                  alt="gifty-anna" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                      Us, It Has to Change</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 text-uppercase font-weight-bold">
+                      by anna gifty opoku-agyeman
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3 align-items-center">
+                <img class="author-profile img-fluid"
+                  src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                  alt="gifty-anna" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                      Us, It Has to Change</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 text-uppercase font-weight-bold">
+                      by anna gifty opoku-agyeman
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3 align-items-center">
+                <img class="author-profile img-fluid"
+                  src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                  alt="gifty-anna" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                      Us, It Has to Change</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 text-uppercase font-weight-bold">
+                      by anna gifty opoku-agyeman
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="border-bottom pt-3">
+              <figure class="d-flex m-0 pb-3 align-items-center">
+                <img class="author-profile img-fluid"
+                  src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                  alt="gifty-anna" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                      Us, It Has to Change</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 text-uppercase font-weight-bold">
+                      by anna gifty opoku-agyeman
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="pt-3">
+              <figure class="d-flex m-0 pb-3 align-items-center">
+                <img class="author-profile img-fluid"
+                  src="https://d.newsweek.com/en/full/1634856/gifty-anna.png?w=63&h=63&f=8468ae8a6e97c19f8770607ac99ad399"
+                  alt="gifty-anna" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Academia Won't Survive Without Black Scholars. To Keep
+                      Us, It Has to Change</a>
+                  </h6>
+                  <div class="author-name">
+                    <p class="m-0 text-uppercase font-weight-bold">
+                      by anna gifty opoku-agyeman
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+
+          <div class="newsletter-signup card w-100 bg-light order-md-7">
+            <div class="card-body p-0">
+              <div class="flex">
+                <div class="d-flex">
+                  <span class="icon-n mr-2"></span>
+                  <h6 class="card-title text-uppercase font-weight-bold">
+                    start your day with our top 5 articles
+                  </h6>
+                </div>
+              </div>
+              <form>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email Address" />
+                </div>
+              </form>
+              <a href="#" class="container-fluid btn bg-red text-white text-uppercase font-weight-bold">free sign up <i
+                  class="fas fa-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- New section ++++ -->
+      <div class="row">
+
+        <div class="col-sm-12">
+
+          <div class="magazine order-4 position-relative pt-4 pt-md-0">
+            <h5 class="mx-auto d-flex align-items-center justify-content-center font-weight-bold text-uppercase py-3">
+              <span class="icon-n mr-2"></span> in the magazine
+            </h5>
+
+
+            <div class="row">
+
+              <div class="col-md-3">
+                <figure class="position-relative">
+                  <img class="ns-images img-fluid mt-md-3 mt-lg-0"
+                    src="https://d.newsweek.com/en/full/1631397/cover-september-11-18-2020.jpg?w=360&h=480&q=90&f=b646c7d6dd0b15651abb86ce18f2f3d2"
+                    alt="Cover September 11-18, 2020" />
+                  <div class="mag-tag font-weight-bold text-uppercase p-2 m-0">september 18 issue</div>
+                  <div class="see-features py-2 d-flex justify-content-center">
+                    <a class=" text-center text-uppercase font-weight-bold text-decoration-none" href="#">see
+                      all
+                      features &nbsp;<i class="fas fa-chevron-right"></i>
+                    </a>
+                  </div>
+                </figure>
+              </div>
+
+              <article class="col-md-3">
+                <figure class="position-relative">
+                  <img class="img-fluid mt-lg-4"
+                    src="https://d.newsweek.com/en/full/1629348/fea-finance-covid-banner.jpg?w=466&h=311&l=47&t=46&q=90&f=8d2ba9398fe877c7a48cac39b61c26ce"
+                    alt="Cover September 11-18, 2020" />
+                  <figcaption>
+                    <div class="d-flex align-items-center">
+                      <p class="text-white font-weight-bold text-uppercase bg-red m-0 py-1 px-2">
+                        cover
+                      </p>
+                      <p class="m-0 my-2 p-2">
+                        <a class="text-uppercase text-red font-weight-bold" href="#">business</a>
+                      </p>
+                    </div>
+                    <h5>
+                      <a href="#" class="article-link font-weight-bold">How the Pandemic Will Change the Way We
+                        Manage Money
+                        Forever</a>
+                    </h5>
+                  </figcaption>
+                </figure>
+              </article>
+
+              <article class="col-md-3">
+                <figure class="position-relative">
+                  <img class="img-fluid mt-lg-4"
+                    src="https://d.newsweek.com/en/full/1629348/fea-finance-covid-banner.jpg?w=466&h=311&l=47&t=46&q=90&f=8d2ba9398fe877c7a48cac39b61c26ce"
+                    alt="Cover September 11-18, 2020" />
+                  <figcaption>
+                    <div class="d-flex align-items-center">
+                      <p class="text-white font-weight-bold text-uppercase bg-red m-0 py-1 px-2">
+                        cover
+                      </p>
+                      <p class="m-0 my-2 p-2">
+                        <a class="text-uppercase text-red font-weight-bold" href="#">business</a>
+                      </p>
+                    </div>
+                    <h5>
+                      <a href="#" class="article-link font-weight-bold">How the Pandemic Will Change the Way We
+                        Manage Money
+                        Forever</a>
+                    </h5>
+                  </figcaption>
+                </figure>
+              </article>
+
+              <article class="col-md-3">
+                <figure class="position-relative">
+                  <img class="img-fluid mt-lg-4"
+                    src="https://d.newsweek.com/en/full/1629348/fea-finance-covid-banner.jpg?w=466&h=311&l=47&t=46&q=90&f=8d2ba9398fe877c7a48cac39b61c26ce"
+                    alt="Cover September 11-18, 2020" />
+                  <figcaption>
+                    <div class="d-flex align-items-center">
+                      <p class="text-white font-weight-bold text-uppercase bg-red m-0 py-1 px-2">
+                        cover
+                      </p>
+                      <p class="m-0 my-2 p-2">
+                        <a class="text-uppercase text-red font-weight-bold" href="#">business</a>
+                      </p>
+                    </div>
+                    <h5>
+                      <a href="#" class="font-weight-bold article-link">How the Pandemic Will Change the Way We
+                        Manage Money
+                        Forever</a>
+                    </h5>
+                  </figcaption>
+                </figure>
+              </article>
+            </div>
+
+
+            <div class="row">
+
+              <article class="col-md-3">
+                <figure class="position-relative">
+                  <img class="img-fluid"
+                    src="https://d.newsweek.com/en/full/1629348/fea-finance-covid-banner.jpg?w=466&h=311&l=47&t=46&q=90&f=8d2ba9398fe877c7a48cac39b61c26ce"
+                    alt="Cover September 11-18, 2020" />
+                  <figcaption>
+                    <div class="d-flex align-items-center">
+                      <p class="text-white font-weight-bold text-uppercase bg-red m-0 py-1 px-2">
+                        cover
+                      </p>
+                      <p class="m-0 my-2 p-2">
+                        <a class="text-uppercase text-red font-weight-bold" href="#">business</a>
+                      </p>
+                    </div>
+                    <h5>
+                      <a href="#" class="article-link font-weight-bold">How the Pandemic Will Change the Way We
+                        Manage Money
+                        Forever</a>
+                    </h5>
+                  </figcaption>
+                </figure>
+              </article>
+
+              <article class="col-md-3">
+                <figure class="position-relative">
+                  <img class="img-fluid"
+                    src="https://d.newsweek.com/en/full/1629348/fea-finance-covid-banner.jpg?w=466&h=311&l=47&t=46&q=90&f=8d2ba9398fe877c7a48cac39b61c26ce"
+                    alt="Cover September 11-18, 2020" />
+                  <figcaption>
+                    <div class="d-flex align-items-center">
+                      <p class="text-white font-weight-bold text-uppercase bg-red m-0 py-1 px-2">
+                        cover
+                      </p>
+                      <p class="m-0 my-2 p-2">
+                        <a class="text-uppercase text-red font-weight-bold" href="#">business</a>
+                      </p>
+                    </div>
+                    <h5>
+                      <a href="#" class="article-link font-weight-bold">How the Pandemic Will Change the Way We
+                        Manage Money
+                        Forever</a>
+                    </h5>
+                  </figcaption>
+                </figure>
+              </article>
+
+              <article class="col-md-3">
+                <figure class="position-relative">
+                  <img class="img-fluid"
+                    src="https://d.newsweek.com/en/full/1629348/fea-finance-covid-banner.jpg?w=466&h=311&l=47&t=46&q=90&f=8d2ba9398fe877c7a48cac39b61c26ce"
+                    alt="Cover September 11-18, 2020" />
+                  <figcaption>
+                    <div class="d-flex align-items-center">
+                      <p class="text-white font-weight-bold text-uppercase bg-red m-0 py-1 px-2">
+                        cover
+                      </p>
+                      <p class="m-0 my-2 p-2">
+                        <a class="text-uppercase text-red font-weight-bold" href="#">business</a>
+                      </p>
+                    </div>
+                    <h5>
+                      <a href="#" class="article-link font-weight-bold">How the Pandemic Will Change the Way We
+                        Manage Money
+                        Forever</a>
+                    </h5>
+                  </figcaption>
+                </figure>
+              </article>
+
+              <article class="col-md-3">
+                <figure class="position-relative">
+                  <img class="img-fluid"
+                    src="https://d.newsweek.com/en/full/1629348/fea-finance-covid-banner.jpg?w=466&h=311&l=47&t=46&q=90&f=8d2ba9398fe877c7a48cac39b61c26ce"
+                    alt="Cover September 11-18, 2020" />
+                  <figcaption>
+                    <div class="d-flex align-items-center">
+                      <p class="text-white font-weight-bold text-uppercase bg-red m-0 py-1 px-2">
+                        cover
+                      </p>
+                      <p class="m-0 my-2 p-2">
+                        <a class="text-uppercase text-red font-weight-bold" href="#">business</a>
+                      </p>
+                    </div>
+                    <h5>
+                      <a href="#" class="article-link font-weight-bold">How the Pandemic Will Change the Way We
+                        Manage Money
+                        Forever</a>
+                    </h5>
+                  </figcaption>
+                </figure>
+              </article>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div class="editors-pick order-4 position-relative pt-4 pt-md-0 border-bottom">
+            <h5
+              class="mx-auto d-flex align-items-center justify-content-center font-weight-bold text-uppercase mb-3 pb-2 pt-3 border-bottom">
+              <span class="icon-n mr-2"></span> editor's pick
+            </h5>
+
+            <div class="row">
+              <article class="d-md-block col-md-6 col-lg-3 pb-2">
+                <a href="#">
+                  <figure class="position-relative">
+                    <img class="img-fluid"
+                      src="https://d.newsweek.com/en/full/1629536/per-spy-masters-book-banner.jpg?w=466&h=311&l=50&t=45&q=90&f=7a9a8aa3534c56503ff81528414bb0d1"
+                      alt="Cover September 11-18, 2020" />
+
+                    <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1">
+                      U.S.
+                    </figcaption>
+                  </figure>
+                </a>
+                <div class="summary">
+                  <h2 class="font-weight-bold">
+                    <a href="#">
+                      As Judge Halts Census Wind Down, These States Have Lowest
+                      Response Rates
+                    </a>
+                  </h2>
+                  <p>
+                    Southeastern states Alabama and Georgia have the lowest
+                    response rates so far for the 2020 census.
+                  </p>
+                </div>
+              </article>
+
+              <article class="d-md-block col-md-6 col-lg-3 pb-2">
+                <a href="#">
+                  <figure class="position-relative">
+                    <img class="img-fluid"
+                      src="https://d.newsweek.com/en/full/1629536/per-spy-masters-book-banner.jpg?w=466&h=311&l=50&t=45&q=90&f=7a9a8aa3534c56503ff81528414bb0d1"
+                      alt="Cover September 11-18, 2020" />
+
+                    <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1">
+                      U.S.
+                    </figcaption>
+                  </figure>
+                </a>
+                <div class="summary">
+                  <h2 class="font-weight-bold">
+                    <a href="#">
+                      As Judge Halts Census Wind Down, These States Have Lowest
+                      Response Rates
+                    </a>
+                  </h2>
+                  <p>
+                    Southeastern states Alabama and Georgia have the lowest
+                    response rates so far for the 2020 census.
+                  </p>
+                </div>
+              </article>
+
+              <article class="d-md-none d-lg-block col-lg-3 pb-2">
+                <a href="#">
+                  <figure class="position-relative">
+                    <img class="img-fluid"
+                      src="https://d.newsweek.com/en/full/1629536/per-spy-masters-book-banner.jpg?w=466&h=311&l=50&t=45&q=90&f=7a9a8aa3534c56503ff81528414bb0d1"
+                      alt="Cover September 11-18, 2020" />
+
+                    <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1">
+                      U.S.
+                    </figcaption>
+                  </figure>
+                </a>
+                <div class="summary">
+                  <h2 class="font-weight-bold">
+                    <a href="#">
+                      As Judge Halts Census Wind Down, These States Have Lowest
+                      Response Rates
+                    </a>
+                  </h2>
+                  <p>
+                    Southeastern states Alabama and Georgia have the lowest
+                    response rates so far for the 2020 census.
+                  </p>
+                </div>
+              </article>
+
+              <article class="d-md-none d-lg-block col-lg-3 pb-2">
+                <a href="#">
+                  <figure class="position-relative">
+                    <img class="img-fluid"
+                      src="https://d.newsweek.com/en/full/1629536/per-spy-masters-book-banner.jpg?w=466&h=311&l=50&t=45&q=90&f=7a9a8aa3534c56503ff81528414bb0d1"
+                      alt="Cover September 11-18, 2020" />
+
+                    <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1">
+                      U.S.
+                    </figcaption>
+                  </figure>
+                </a>
+                <div class="summary">
+                  <h2 class="font-weight-bold">
+                    <a href="#">
+                      As Judge Halts Census Wind Down, These States Have Lowest
+                      Response Rates
+                    </a>
+                  </h2>
+                  <p>
+                    Southeastern states Alabama and Georgia have the lowest
+                    response rates so far for the 2020 census.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="row">
+              <article class="d-none d-md-block col-md-6 d-lg-none pb-2">
+                <a href="#">
+                  <figure class="position-relative">
+                    <img class="img-fluid"
+                      src="https://d.newsweek.com/en/full/1629536/per-spy-masters-book-banner.jpg?w=466&h=311&l=50&t=45&q=90&f=7a9a8aa3534c56503ff81528414bb0d1"
+                      alt="Cover September 11-18, 2020" />
+
+                    <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1">
+                      U.S.
+                    </figcaption>
+                  </figure>
+                </a>
+                <div class="summary">
+                  <h2 class="font-weight-bold">
+                    <a href="#">
+                      As Judge Halts Census Wind Down, These States Have Lowest
+                      Response Rates
+                    </a>
+                  </h2>
+                  <p>
+                    Southeastern states Alabama and Georgia have the lowest
+                    response rates so far for the 2020 census.
+                  </p>
+                </div>
+              </article>
+
+              <article class="d-none d-md-block col-md-6 d-lg-none pb-2">
+                <a href="#">
+                  <figure class="position-relative">
+                    <img class="img-fluid"
+                      src="https://d.newsweek.com/en/full/1629536/per-spy-masters-book-banner.jpg?w=466&h=311&l=50&t=45&q=90&f=7a9a8aa3534c56503ff81528414bb0d1"
+                      alt="Cover September 11-18, 2020" />
+
+                    <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1">
+                      U.S.
+                    </figcaption>
+                  </figure>
+                </a>
+                <div class="summary">
+                  <h2 class="font-weight-bold">
+                    <a href="#">
+                      As Judge Halts Census Wind Down, These States Have Lowest
+                      Response Rates
+                    </a>
+                  </h2>
+                  <p>
+                    Southeastern states Alabama and Georgia have the lowest
+                    response rates so far for the 2020 census.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="row">
+              <article class="d-none d-md-block col-md-6 d-lg-none pb-2">
+                <a href="#">
+                  <figure class="position-relative">
+                    <img class="img-fluid"
+                      src="https://d.newsweek.com/en/full/1629536/per-spy-masters-book-banner.jpg?w=466&h=311&l=50&t=45&q=90&f=7a9a8aa3534c56503ff81528414bb0d1"
+                      alt="Cover September 11-18, 2020" />
+
+                    <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1">
+                      U.S.
+                    </figcaption>
+                  </figure>
+                </a>
+                <div class="summary">
+                  <h2 class="font-weight-bold">
+                    <a href="#">
+                      As Judge Halts Census Wind Down, These States Have Lowest
+                      Response Rates
+                    </a>
+                  </h2>
+                  <p>
+                    Southeastern states Alabama and Georgia have the lowest
+                    response rates so far for the 2020 census.
+                  </p>
+                </div>
+              </article>
+
+              <article class="d-none d-md-block col-md-6 d-lg-none pb-2">
+                <a href="#">
+                  <figure class="position-relative">
+                    <img class="img-fluid"
+                      src="https://d.newsweek.com/en/full/1629536/per-spy-masters-book-banner.jpg?w=466&h=311&l=50&t=45&q=90&f=7a9a8aa3534c56503ff81528414bb0d1"
+                      alt="Cover September 11-18, 2020" />
+
+                    <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1">
+                      U.S.
+                    </figcaption>
+                  </figure>
+                </a>
+                <div class="summary">
+                  <h2 class="font-weight-bold">
+                    <a href="#">
+                      As Judge Halts Census Wind Down, These States Have Lowest
+                      Response Rates
+                    </a>
+                  </h2>
+                  <p>
+                    Southeastern states Alabama and Georgia have the lowest
+                    response rates so far for the 2020 census.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+
+
+            <div class="row">
+              <article class="col-md-6 col-lg-3 pb-2">
+                <a href="#">
+                  <figure class="position-relative">
+                    <img class="img-fluid"
+                      src="https://d.newsweek.com/en/full/1629536/per-spy-masters-book-banner.jpg?w=466&h=311&l=50&t=45&q=90&f=7a9a8aa3534c56503ff81528414bb0d1"
+                      alt="Cover September 11-18, 2020" />
+
+                    <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1">
+                      U.S.
+                    </figcaption>
+                  </figure>
+                </a>
+                <div class="summary">
+                  <h2 class="font-weight-bold">
+                    <a href="#">
+                      As Judge Halts Census Wind Down, These States Have Lowest
+                      Response Rates
+                    </a>
+                  </h2>
+                  <p>
+                    Southeastern states Alabama and Georgia have the lowest
+                    response rates so far for the 2020 census.
+                  </p>
+                </div>
+              </article>
+
+              <article class="col-md-6 col-lg-3 pb-2">
+                <a href="#">
+                  <figure class="position-relative">
+                    <img class="img-fluid"
+                      src="https://d.newsweek.com/en/full/1629536/per-spy-masters-book-banner.jpg?w=466&h=311&l=50&t=45&q=90&f=7a9a8aa3534c56503ff81528414bb0d1"
+                      alt="Cover September 11-18, 2020" />
+
+                    <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1">
+                      U.S.
+                    </figcaption>
+                  </figure>
+                </a>
+                <div class="summary">
+                  <h2 class="font-weight-bold">
+                    <a href="#">
+                      As Judge Halts Census Wind Down, These States Have Lowest
+                      Response Rates
+                    </a>
+                  </h2>
+                  <p>
+                    Southeastern states Alabama and Georgia have the lowest
+                    response rates so far for the 2020 census.
+                  </p>
+                </div>
+              </article>
+
+              <article class="d-md-none d-lg-block col-lg-3 pb-2">
+                <a href="#">
+                  <figure class="position-relative">
+                    <img class="img-fluid"
+                      src="https://d.newsweek.com/en/full/1629536/per-spy-masters-book-banner.jpg?w=466&h=311&l=50&t=45&q=90&f=7a9a8aa3534c56503ff81528414bb0d1"
+                      alt="Cover September 11-18, 2020" />
+
+                    <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1">
+                      U.S.
+                    </figcaption>
+                  </figure>
+                </a>
+                <div class="summary">
+                  <h2 class="font-weight-bold">
+                    <a href="#">
+                      As Judge Halts Census Wind Down, These States Have Lowest
+                      Response Rates
+                    </a>
+                  </h2>
+                  <p>
+                    Southeastern states Alabama and Georgia have the lowest
+                    response rates so far for the 2020 census.
+                  </p>
+                </div>
+              </article>
+
+              <article class="d-md-none d-lg-block col-lg-3 pb-2">
+                <a href="#">
+                  <figure class="position-relative">
+                    <img class="img-fluid"
+                      src="https://d.newsweek.com/en/full/1629536/per-spy-masters-book-banner.jpg?w=466&h=311&l=50&t=45&q=90&f=7a9a8aa3534c56503ff81528414bb0d1"
+                      alt="Cover September 11-18, 2020" />
+
+                    <figcaption class="position-absolute category text-red font-weight-bold px-3 py-1">
+                      U.S.
+                    </figcaption>
+                  </figure>
+                </a>
+                <div class="summary">
+                  <h2 class="font-weight-bold">
+                    <a href="#">
+                      As Judge Halts Census Wind Down, These States Have Lowest
+                      Response Rates
+                    </a>
+                  </h2>
+                  <p>
+                    Southeastern states Alabama and Georgia have the lowest
+                    response rates so far for the 2020 census.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- U.S. Section -->
+      <h2 class="font-weight-bold text-uppercase pt-3 mt-2">
+        <a href="#" class="text-red">u.s.</a>
+      </h2>
+      <div class="row">
+        <div class="us-section d-md-flex p-md-0 mx-auto">
+
+          <article class="col-12 col-md-4 col-lg-4 pb-3 px-md-0">
+            <a href="#">
+              <img class="ns-images img-fluid px-md-3"
+                src="https://d.newsweek.com/en/full/1638864/alligator.jpg?w=397&h=265&f=de38d2d47b779cc2c31452dddbbaa944"
+                alt="alligator" />
+            </a>
+            <h2 class="font-weight-bold pt-3 px-md-3">
+              <a href="#">
+                Florida Man Attacked by Alligator That Tried to Drag Him Under Water
+              </a>
+            </h2>
+          </article>
+          <article class="col-12 col-md-4 col-lg-4 pb-3 px-md-0">
+            <a href="#">
+              <img class="ns-images img-fluid px-md-3"
+                src="https://d.newsweek.com/en/full/1638829/wisconsin-north-dakota-missouri-covid-19-coronavirus-cases.jpg?w=397&h=265&f=7be163a0744c4794e4c827c395debf15"
+                alt="Wisconsin North Dakota Missouri COVID-19 coronavirus cases" />
+            </a>
+            <h2 class="font-weight-bold pt-3 px-md-3">
+              <a href="#">
+                N Dakota, Wisconsin & Missouri Report Most COVID Cases Since Epidemic Began
+              </a>
+            </h2>
+          </article>
+          <!-- 3rd article with 3 images (medium) -->
+
+          <div class="us-section col-12 col-md-4 col-lg-4">
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex align-items-center align-items-md-start pb-3 mb-3 pb-md-2 mb-md-2 border-bottom">
+                <img class="xs-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1638711/russia-belarus-slavic-brotherhood-2020.jpg?w=397&h=265&f=eb14cf8c0bf86194bd890f0543fcac5b"
+                  alt="russia, belarus, slavic, brotherhood, 2020" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Fire-Scorched Oregon Braces for Floods as California Increases
+                      Evacuations</a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex pb-3 mb-3 pb-md-2 mb-md-2 border-bottom">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1638818/route-91-harvest-festival-shooting-samanta-arjune.jpg?w=95&h=95&f=55a5d23c3d0d05b87182efb64bda4c7f"
+                  alt="Route 91 Harvest festival shooting Samanta Arjune" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">60th Victim of Las Vegas Mass Shooting Dies From Wounds 3 Years
+                      Later</a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex align-items-center align-items-md-start pb-3 mb-3 pb-md-2 mb-md-2">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1638808/alex-jones.jpg?w=95&h=95&f=52b907c898a74c48ce25e87fe9e6ddea"
+                  alt="alex jones" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Alex Jones Denied Delay in Sandy Hook Defamation Lawsuit</a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+        </div>
+
+        <!-- 3rd article with 3 images (small) -->
+
+        <div class="us-section d-md-none col-12">
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3 border-bottom ">
+              <img class="xs-images img-fluid"
+                src="https://d.newsweek.com/en/full/1638851/california-wildfries-evacuations-oregon-floods.jpg?w=397&h=265&f=10d1696575d26df7baa5f0d0ef3c3e02"
+                alt="California wildfires evacuations Oregon floods" />
+              <figcaption class="pl-3">
+                <h6>
+                  <a class="font-weight-bold" href="#">Fire-Scorched Oregon Braces for Floods as California Increases
+                    Evacuations</a>
+                </h6>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3 border-bottom">
+              <img class="ms-images img-fluid"
+                src="https://d.newsweek.com/en/full/1638818/route-91-harvest-festival-shooting-samanta-arjune.jpg?w=95&h=95&f=55a5d23c3d0d05b87182efb64bda4c7f"
+                alt="Route 91 Harvest festival shooting Samanta Arjune" />
+              <figcaption class="pl-3">
+                <h6>
+                  <a class="font-weight-bold" href="#">60th Victim of Las Vegas Mass Shooting Dies From Wounds 3 Years
+                    Later</a>
+                </h6>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3">
+              <img class="ms-images img-fluid"
+                src="https://d.newsweek.com/en/full/1638808/alex-jones.jpg?w=95&h=95&f=52b907c898a74c48ce25e87fe9e6ddea"
+                alt="alex jones" />
+              <figcaption class="pl-3">
+                <h6>
+                  <a class="font-weight-bold" href="#">Alex Jones Denied Delay in Sandy Hook Defamation Lawsuit</a>
+                </h6>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </div>
+      <div class="border-thin"></div>
+
+      <!-- World Section -->
+      <h2 class="font-weight-bold pt-3 mt-2">
+        <a href="#" class="text-red">World</a>
+      </h2>
+      <div class="row">
+        <div class="world-section d-md-flex p-md-0 mx-auto">
+
+          <article class="col-12 col-md-4 col-lg-4 pb-3 px-md-0">
+            <a href="#">
+              <img class="ns-images img-fluid px-md-3"
+                src="https://d.newsweek.com/en/full/1638850/jacinda-ardern.jpg?w=397&h=265&f=65737b4db97b09d190980361f641a1b1"
+                alt="Jacinda Ardern" />
+            </a>
+            <h2 class="font-weight-bold pt-3 px-md-3">
+              <a href="#">
+                New Zealand Reports No New COVID Cases as Country Nears Elimination Again
+              </a>
+            </h2>
+          </article>
+          <article class="col-12 col-md-4 col-lg-4 pb-3 px-md-0">
+            <a href="#">
+              <img class="ns-images img-fluid px-md-3"
+                src="https://d.newsweek.com/en/full/1638756/srinagar-protest.jpg?w=397&h=265&f=85da72243877be0d234ff2f1ddc820c3"
+                alt="Srinagar Protest" />
+            </a>
+            <h2 class="font-weight-bold pt-3 px-md-3">
+              <a href="#">
+                Indian Town Cuts Internet to Avoid More Protests Over Police Custody Death
+              </a>
+            </h2>
+          </article>
+          <!-- 3rd article with 3 images (medium) -->
+
+          <div class="us-section col-12 col-md-4 col-lg-4">
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex align-items-center align-items-md-start pb-3 mb-3 pb-md-2 mb-md-2 border-bottom">
+                <img class="xs-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1638711/russia-belarus-slavic-brotherhood-2020.jpg?w=397&h=265&f=eb14cf8c0bf86194bd890f0543fcac5b"
+                  alt="russia, belarus, slavic, brotherhood, 2020" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Russia Eyes East and West Border Threats, Looks to China for
+                      Closer Ties
+                    </a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex pb-3 mb-3 pb-md-2 mb-md-2 border-bottom">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1638415/joe-biden.jpg?w=95&h=95&f=a8ea396f9d1cdaae6490cebf1191c2b6"
+                  alt="Joe Biden" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Joe Biden Warns Britain Over Brexit
+                    </a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex align-items-center align-items-md-start pb-3 mb-3 pb-md-2 mb-md-2">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1638328/usa-binary-map-smaller-version.jpg?w=95&h=95&f=7206a8271ffecc83ef23c1e46a456072"
+                  alt="usa binary map smaller version" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">As U.S.-China Cyber Cold War Rages, Intellectual Property Is A Costly Front</a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+        </div>
+
+        <!-- 3rd article with 3 images (small) -->
+
+        <div class="us-section d-md-none col-12">
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3 border-bottom ">
+              <img class="xs-images img-fluid"
+                src="https://d.newsweek.com/en/full/1638711/russia-belarus-slavic-brotherhood-2020.jpg?w=397&h=265&f=eb14cf8c0bf86194bd890f0543fcac5b"
+                alt="russia, belarus, slavic, brotherhood, 2020" />
+              <figcaption class="pl-3">
+                <h6>
+                  <a class="font-weight-bold" href="#">Russia Eyes East and West Border Threats, Looks to China for
+                    Closer Ties
+                  </a>
+                </h6>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3 border-bottom">
+              <img class="ms-images img-fluid"
+                src="https://d.newsweek.com/en/full/1638415/joe-biden.jpg?w=95&h=95&f=a8ea396f9d1cdaae6490cebf1191c2b6"
+                alt="Joe Biden" />
+              <figcaption class="pl-3">
+                <h6>
+                  <a class="font-weight-bold" href="#">Joe Biden Warns Britain Over Brexit
+                    Later</a>
+                </h6>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3">
+              <img class="ms-images img-fluid"
+                src="https://d.newsweek.com/en/full/1638328/usa-binary-map-smaller-version.jpg?w=95&h=95&f=7206a8271ffecc83ef23c1e46a456072"
+                alt="usa binary map smaller version" />
+              <figcaption class="pl-3">
+                <h6>
+                  <a class="font-weight-bold" href="#">As U.S.-China Cyber Cold War Rages, Intellectual Property Is A Costly Front</a>
+                </h6>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </div>
+      <div class="border-thin"></div>
+
+      <!-- Business Section -->
+      <h2 class="font-weight-bold pt-3 mt-2">
+        <a href="#" class="text-red">Business</a>
+      </h2>
+      <div class="row">
+        <div class="us-section d-md-flex p-md-0 mx-auto">
+
+          <article class="col-12 col-md-4 col-lg-4 pb-3 px-md-0">
+            <a href="#">
+              <img class="ns-images img-fluid px-md-3"
+                src="https://d.newsweek.com/en/full/1638864/alligator.jpg?w=397&h=265&f=de38d2d47b779cc2c31452dddbbaa944"
+                alt="pennsylvania mask restrictions lifted judge" />
+            </a>
+            <h2 class="font-weight-bold pt-3 px-md-3">
+              <a href="#">
+                Judge Rules Pennsylvania's 'New Normal' COVID Restrictions Unconstitutional
+              </a>
+            </h2>
+          </article>
+          <article class="col-12 col-md-4 col-lg-4 pb-3 px-md-0">
+            <a href="#">
+              <img class="ns-images img-fluid px-md-3"
+                src="https://d.newsweek.com/en/full/1635858/tiktok-sale.jpg?w=397&h=265&f=03de5043f49dc9bc61e7a897d5d78c93"
+                alt="TikTok Sale" />
+            </a>
+            <h2 class="font-weight-bold pt-3 px-md-3">
+              <a href="#">
+                TikTok Chooses Oracle, a Rare Trump Ally in Silicon Valley, to Sell Assets
+              </a>
+            </h2>
+          </article>
+          <!-- 3rd article with 3 images (medium) -->
+
+          <div class="us-section col-12 col-md-4 col-lg-4">
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex align-items-center align-items-md-start pb-3 mb-3 pb-md-2 mb-md-2 border-bottom">
+                <img class="xs-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1631938/swan-dive-rochester-protests-destroyed.jpg?w=397&h=265&f=7603461cb23f4cb702a0571d5d0e1931"
+                  alt="swan dive rochester protests destroyed" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Rochester Eatery Offered BLM Protesters Water Hours Before Being Vandalized</a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex pb-3 mb-3 pb-md-2 mb-md-2 border-bottom">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1631351/dunkin-donuts-santa-monica-california-2015.jpg?w=95&h=95&f=35e099801071240a5d9f02a52856df7e"
+                  alt="Dunkin' Donuts, Santa Monica, California, 2015" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Are Starbucks, Dunkin' Donuts Open on Labor Day? See Coffee Shop Hours</a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex align-items-center align-items-md-start pb-3 mb-3 pb-md-2 mb-md-2">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1629704/cover-pandemic-money-graphic.jpg?w=95&h=95&f=42b4f3a81fcfccf5d989989f07a8eb2c"
+                  alt="Cover pandemic money graphic" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">How the Pandemic Will Change the Way We Manage Money Forever</a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+        </div>
+
+        <!-- 3rd article with 3 images (small) -->
+
+        <div class="us-section d-md-none col-12">
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3 border-bottom ">
+              <img class="xs-images img-fluid"
+                src="https://d.newsweek.com/en/full/1631938/swan-dive-rochester-protests-destroyed.jpg?w=397&h=265&f=7603461cb23f4cb702a0571d5d0e1931"
+                alt="swan dive rochester protests destroyed" />
+              <figcaption class="pl-3">
+                <h6>
+                  <a class="font-weight-bold" href="#">Rochester Eatery Offered BLM Protesters Water Hours Before Being Vandalized</a>
+                </h6>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3 border-bottom">
+              <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1631351/dunkin-donuts-santa-monica-california-2015.jpg?w=95&h=95&f=35e099801071240a5d9f02a52856df7e"
+                  alt="Dunkin' Donuts, Santa Monica, California, 2015" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Are Starbucks, Dunkin' Donuts Open on Labor Day? See Coffee Shop Hours</a>
+                  </h6>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3">
+              <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1629704/cover-pandemic-money-graphic.jpg?w=95&h=95&f=42b4f3a81fcfccf5d989989f07a8eb2c"
+                  alt="Cover pandemic money graphic" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">How the Pandemic Will Change the Way We Manage Money Forever</a>
+                  </h6>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </div>
+      <div class="border-thin"></div>
+      
+      <!-- Tech & Science Section -->
+      <h2 class="font-weight-bold pt-3 mt-2">
+        <a href="#" class="text-red">Tech & Science</a>
+      </h2>
+      <div class="row">
+        <div class="world-section d-md-flex p-md-0 mx-auto">
+          <article class="col-12 col-md-4 col-lg-4 pb-3 px-md-0">
+            <a href="#">
+              <img class="ns-images img-fluid px-md-3"
+                src="https://d.newsweek.com/en/full/1638595/whale-ship-dead.jpg?w=397&h=265&f=d7826566fce20da95dd17fe5ab4e3288"
+                alt="whale ship dead" />
+            </a>
+            <h2 class="font-weight-bold pt-3 px-md-3">
+              <a href="#">
+                California Whales Are Being Killed by Ships. AI Might Be Able to Save Them
+              </a>
+            </h2>
+          </article>
+          <article class="col-12 col-md-4 col-lg-4 pb-3 px-md-0">
+            <a href="#">
+              <img class="ns-images img-fluid px-md-3"
+                src="https://d.newsweek.com/en/full/1638418/oculus-quest.jpg?w=397&h=265&f=d31f4aeddfbb8e881c01fe153e67bba9"
+                alt="Oculus Quest" />
+            </a>
+            <h2 class="font-weight-bold pt-3 px-md-3">
+              <a href="#">
+                Facebook VR Guru Embarrassed by Lack of Social Experiences During COVID-19
+              </a>
+            </h2>
+          </article>
+          <!-- 3rd article with 3 images (medium) -->
+
+          <div class="us-section col-12 col-md-4 col-lg-4">
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex align-items-center align-items-md-start pb-3 mb-3 pb-md-2 mb-md-2 border-bottom">
+                <img class="xs-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1637737/elon-musk.jpg?w=397&h=265&f=b65416f873c202958c4e0c4983bf82a5"
+                  alt="Elon Musk" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Musk Says Electric Cars in Tunnels Under Cities Will 'Feel Like Warp Drive'
+                    </a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex pb-3 mb-3 pb-md-2 mb-md-2 border-bottom">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1637652/mark-zuckerberg.jpg?w=95&h=95&f=8bb3b973541301535aa9402d455470cb"
+                  alt="Mark Zuckerberg" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Facebook Refuses to Comment on 24-Hour Instagram Boycott by Celebrities
+                    </a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex align-items-center align-items-md-start pb-3 mb-3 pb-md-2 mb-md-2">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1637537/tucker-carlson-tonight-dr-li-meng-yan.png?w=95&h=95&f=54759eb13bc368b5b56fbc2729d978f5"
+                  alt="Tucker Carlson Tonight - Dr. Li-Meng Yan" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Twitter Suspends Chinese Virologist Who Claimed Coronavirus Was Made in Lab</a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+        </div>
+
+        <!-- 3rd article with 3 images (small) -->
+
+        <div class="us-section d-md-none col-12">
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3 border-bottom ">
+              <img class="xs-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1637737/elon-musk.jpg?w=397&h=265&f=b65416f873c202958c4e0c4983bf82a5"
+                  alt="Elon Musk" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Musk Says Electric Cars in Tunnels Under Cities Will 'Feel Like Warp Drive'
+                    </a>
+                  </h6>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3 border-bottom">
+              <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1637652/mark-zuckerberg.jpg?w=95&h=95&f=8bb3b973541301535aa9402d455470cb"
+                  alt="Mark Zuckerberg" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Facebook Refuses to Comment on 24-Hour Instagram Boycott by Celebrities
+                    </a>
+                  </h6>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3">
+              <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1637537/tucker-carlson-tonight-dr-li-meng-yan.png?w=95&h=95&f=54759eb13bc368b5b56fbc2729d978f5"
+                  alt="Tucker Carlson Tonight - Dr. Li-Meng Yan" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Twitter Suspends Chinese Virologist Who Claimed Coronavirus Was Made in Lab</a>
+                  </h6>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </div>
+      <div class="border-thin"></div>
+
+      <!-- Culture Section -->
+      <h2 class="font-weight-bold pt-3 mt-2">
+        <a href="#" class="text-red">Culture</a>
+      </h2>
+      <div class="row">
+        <div class="us-section d-md-flex p-md-0 mx-auto">
+
+          <article class="col-12 col-md-4 col-lg-4 pb-3 px-md-0">
+            <a href="#">
+              <img class="ns-images img-fluid px-md-3"
+                src="https://d.newsweek.com/en/full/1561273/brad-pitt-jennifer-aniston-reunion.jpg?w=397&h=265&f=ebce885ed072510e9647ab3b16c9943c"
+                alt="Brad Pitt and Jennifer Aniston reunion" />
+            </a>
+            <h2 class="font-weight-bold pt-3 px-md-3">
+              <a href="#">
+                Where to Watch Brad Pitt, Jennifer Aniston 'Fast Times At Ridgemont High'
+              </a>
+            </h2>
+          </article>
+          <article class="col-12 col-md-4 col-lg-4 pb-3 px-md-0">
+            <a href="#">
+              <img class="ns-images img-fluid px-md-3"
+                src="https://d.newsweek.com/en/full/1636809/cul-the-war-treaty.jpg?w=397&h=265&f=dc216af11e77dc0b965bed9b749c390d"
+                alt="CUL_The War and Treaty" />
+            </a>
+            <h2 class="font-weight-bold pt-3 px-md-3">
+              <a href="#">
+                The War and Treaty Look for Healing on their new album
+              </a>
+            </h2>
+          </article>
+          <!-- 3rd article with 3 images (medium) -->
+
+          <div class="us-section col-12 col-md-4 col-lg-4">
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex align-items-center align-items-md-start pb-3 mb-3 pb-md-2 mb-md-2 border-bottom">
+                <img class="xs-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1638747/electrodes.jpg?w=397&h=265&l=41&t=31&f=c1434c89db2a5def54f96026e33c0f9b"
+                  alt="Electrodes" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Who Was Robert Galbraith Heath?</a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex pb-3 mb-3 pb-md-2 mb-md-2 border-bottom">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1638739/hogwarts-legacy-harry-potter-game-screenshot-troll.jpg?w=95&h=95&l=61&t=28&f=b3d5e58b8299f79189ebad655ca6dd03"
+                  alt="hogwarts legacy harry potter game screenshot troll" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">'Hogwarts Legacy' Doesn't Have JK Rowling and Some Fans Seem Conflicted</a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex align-items-center align-items-md-start pb-3 mb-3 pb-md-2 mb-md-2">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1638699/michael-stipe.jpg?w=95&h=95&l=52&t=25&f=c63729e456a1a25ace6ddc62b18ed058"
+                  alt="Michael Stipe" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">REM's Michael Stipe Offers New COVID Guidelines to Georgia Governor</a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+        </div>
+
+        <!-- 3rd article with 3 images (small) -->
+
+        <div class="us-section d-md-none col-12">
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3 border-bottom ">
+              <img class="xs-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1638747/electrodes.jpg?w=397&h=265&l=41&t=31&f=c1434c89db2a5def54f96026e33c0f9b"
+                  alt="Electrodes" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Who Was Robert Galbraith Heath?</a>
+                  </h6>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3 border-bottom">
+              <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1638739/hogwarts-legacy-harry-potter-game-screenshot-troll.jpg?w=95&h=95&l=61&t=28&f=b3d5e58b8299f79189ebad655ca6dd03"
+                  alt="hogwarts legacy harry potter game screenshot troll" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">'Hogwarts Legacy' Doesn't Have JK Rowling and Some Fans Seem Conflicted</a>
+                  </h6>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3">
+              <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1638699/michael-stipe.jpg?w=95&h=95&l=52&t=25&f=c63729e456a1a25ace6ddc62b18ed058"
+                  alt="Michael Stipe" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">REM's Michael Stipe Offers New COVID Guidelines to Georgia Governor</a>
+                  </h6>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </div>
+      <div class="border-thin"></div>
+      
+
+      <!-- Sports Section -->
+      <h2 class="font-weight-bold pt-3 mt-2">
+        <a href="#" class="text-red">Sports</a>
+      </h2>
+      <div class="row">
+        <div class="world-section d-md-flex p-md-0 mx-auto">
+          <article class="col-12 col-md-4 col-lg-4 pb-3 px-md-0">
+            <a href="#">
+              <img class="ns-images img-fluid px-md-3"
+                src="https://d.newsweek.com/en/full/1578183/nfl-joe-buck.jpg?w=397&h=265&f=678f14137279bb7c181ade1551ea0e40"
+                alt="NFL, Joe Buck" />
+            </a>
+            <h2 class="font-weight-bold pt-3 px-md-3">
+              <a href="#">
+                Watch Moment Joe Buck Finds Out He's Been Inducted into the Hall of Fame
+              </a>
+            </h2>
+          </article>
+          <article class="col-12 col-md-4 col-lg-4 pb-3 px-md-0">
+            <a href="#">
+              <img class="ns-images img-fluid px-md-3"
+                src="https://d.newsweek.com/en/full/1638863/joe-burrow-cincinnati-bengals.jpg?w=397&h=265&f=483d149cbda4aafe8383761b5bde43e5"
+                alt="Joe Burrow, Cincinnati Bengals" />
+            </a>
+            <h2 class="font-weight-bold pt-3 px-md-3">
+              <a href="#">
+                Joe Burrow Sets Series of New NFL Records as Bengals Lose to Browns on TNF
+              </a>
+            </h2>
+          </article>
+          <!-- 3rd article with 3 images (medium) -->
+
+          <div class="us-section col-12 col-md-4 col-lg-4">
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex align-items-center align-items-md-start pb-3 mb-3 pb-md-2 mb-md-2 border-bottom">
+                <img class="xs-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1636400/joe-burrow-cincinnati-bengals.jpg?w=397&h=265&f=b7de5f40019f0a047e8bb3d2ae76c418"
+                  alt="Joe Burrow, Cincinnati Bengals" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Thursday Night Football: Cincinnati Bengals @ Cleveland Browns Preview
+                    </a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex pb-3 mb-3 pb-md-2 mb-md-2 border-bottom">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1637529/jimmy-butler-miami-heat.jpg?w=95&h=95&f=007ae9357e1315d5f3dda04dc27c9fa8"
+                  alt="Jimmy Butler, Miami Heat" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">NBA Playoffs: How to Watch Miami Heat vs Boston Celtics on TV and Online
+                    </a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="d-none d-md-block col-md-12 col-lg-12 p-md-0">
+              <figure class="d-flex align-items-center align-items-md-start pb-3 mb-3 pb-md-2 mb-md-2">
+                <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1638405/tiger-woods-us-open.jpg?w=95&h=95&f=12ed832757a31f0bc4543bd26d33b5da"
+                  alt="Tiger Woods, U.S. Open" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">U.S. Open 2020: Tiger Woods Tee Time, First Round Pairings</a>
+                  </h6>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+        </div>
+
+        <!-- 3rd article with 3 images (small) -->
+
+        <div class="us-section d-md-none col-12">
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3 border-bottom ">
+              <img class="xs-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1636400/joe-burrow-cincinnati-bengals.jpg?w=397&h=265&f=b7de5f40019f0a047e8bb3d2ae76c418"
+                  alt="Joe Burrow, Cincinnati Bengals" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">Thursday Night Football: Cincinnati Bengals @ Cleveland Browns Preview
+                    </a>
+                  </h6>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3 border-bottom">
+              <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1637529/jimmy-butler-miami-heat.jpg?w=95&h=95&f=007ae9357e1315d5f3dda04dc27c9fa8"
+                  alt="Jimmy Butler, Miami Heat" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">NBA Playoffs: How to Watch Miami Heat vs Boston Celtics on TV and Online
+                    </a>
+                  </h6>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="col-sm-12 col-md-12 p-0">
+            <figure class="d-flex pb-3 mb-3">
+              <img class="ms-images img-fluid"
+                  src="https://d.newsweek.com/en/full/1638405/tiger-woods-us-open.jpg?w=95&h=95&f=12ed832757a31f0bc4543bd26d33b5da"
+                  alt="Tiger Woods, U.S. Open" />
+                <figcaption class="pl-3">
+                  <h6>
+                    <a class="font-weight-bold" href="#">U.S. Open 2020: Tiger Woods Tee Time, First Round Pairings</a>
+                  </h6>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </div>
+      <div class="border-thin"></div>
+
+
+
+      <div class="row">
+        <div class="col-sm-12 col-lg-12">
+
+          <div class="row flex-lg-row subscribe-block">
+            <div class="col-lg-7">
+              <div class="subscribe position-relative pt-3 pb-2 mt-3 mb-2 p-md-0 m-md-0 pt-lg-1">
+                <h6 class="text-red font-weight-bold text-uppercase pt-4 py-lg-2 pt-md-3 pb-md-1 m-lg-0">
+                  subscribe
+                </h6>
+                <div
+                  class="bg-light p-3 p-md-4 mb-4 mb-lg-0 p-lg-5 d-flex flex-column flex-md-row justify-content-center">
+                  <div
+                    class="d-flex mx-md-auto mr-5 pr-3 mr-md-0 justify-content-center position-relative mb-2 pb-md-2 mb-md-2">
+                    <div class="mag-position mr-4 pr-1 position-relative">
+                      <img class="ns-images"
+                        src="https://d.newsweek.com/en/full/1628669/cover-september-04-2020.jpg?w=170&q=95&f=1360030f30130d3440859fd318762628"
+                        alt="magazine thumb preview" />
+                      <img class="special-image"
+                        src="https://d.newsweek.com/en/full/1631397/cover-september-11-18-2020.jpg?w=170&q=95&f=87dabb57a32fecfaface1c7cf7a07d1f"
+                        alt="magazine thumb preview" />
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex flex-column mx-auto align-items-center align-items-md-start align-items-lg-center justify-content-md-center ml-md-5 pl-md-5">
+                    <h5 class="subscribe-text font-weight-bold mt-4 text-wrap text-center text-md-left">
+                      In-depth Stories You Don't See Elsewhere About Topics
+                      You Want to Read!
+                    </h5>
+                    <p class="subscribe-p text-secondary">All Access + Weekly Delivery.</p>
+                    <button type="button"
+                      class="btn-text bg-red border-0 btn-sm py-2 my-2 text-white text-center font-weight-bold text-uppercase">
+                      subscribe &nbsp; <i class="fas fa-chevron-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="newsletter position-relative mt-2 pt-3 pt-md-1 pt-lg-1 pb-lg-0 m-lg-0 border-bottom">
+
+                <h6 class="text-red font-weight-bold text-uppercase pb-1 mt-2 pt-3 pt-md-1 pt-md-2 p-lg-0">
+                  newsletter
+                </h6>
+                <div class="d-flex">
+                  <div class="d-none d-md-block col-md-3 col-lg-6 newsletter-image"></div>
+                  <div class="col-md-9 col-lg-6 align-items-center justify-content-md-center border">
+                    <div class="px-2 pt-4 pb-2 m-2 ">
+                      <h4 class="newsletter-heading p-md-0 font-weight-bold text-center text-md-left">The Starting 5
+                      </h4>
+                      <p class="text-secondary text-center text-md-left">
+                        See why nearly a quarter of a million subscribers begin
+                        their day with the Starting 5.
+                      </p>
+                      <input class="py-1 py-2 pl-2 border input-group" type="text" placeholder=" Email address" />
+                      <button type="button"
+                        class="btn-text-2 bg-red border-0 btn-sm btn-block py-2 my-2 text-white text-center font-weight-bold text-uppercase">
+                        free sign up &nbsp; <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="solid">
+    </div>
+    <footer>
+      <div class="page-footer position-relative pt-4 pt-md-0">
+        <div class="d-md-flex flex-column align-items-start pt-4">
+          <div>
+            <div class="social d-flex flex-column flex-md-row justify-content-md-between">
+              <div class="footer-left d-md-flex align-items-md-baseline flex-md-row justify-content-md-between">
+                <svg version="1.1" class="footer-newsweek-icon mx-1 px-1 mb-0" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60"
+                  xml:space="preserve">
+                  <g>
+                    <path class="st0"
+                      d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7">
+                    </path>
+                  </g>
+                </svg>
+                <p class="copyright my-2 mx-1 px-1"> © 2020 Newsweek</p>
+              </div>
+
+              <div class="social d-flex justify-content-start mt-2 mb-1">
+                <a class="mx-2"><i class="fab fa-facebook-square"></i></a>
+                <a class="mx-2"><i class="fab fa-twitter"></i></a>
+                <a class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                <a class="mx-2"><i class="fab fa-tumblr"></i></a>
+                <a class="mx-2"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+
+            <div class="footer-links border-top text-secondary">
+              <div class="footer-language-options my-1">
+                <ul class="d-flex m-0">
+                  <li class="px-lg-2 px-1">Editions:</li>
+                  <li class="px-lg-2 px-1">
+                    <a class="text-secondary" href="#">U.S. Edition</a>
+                  </li>
+                  <li class="d-none d-lg-block font-weight-light text-secondary">
+                    &verbar;
+                  </li>
+                  <li class="px-lg-2 px-1">
+                    <a class="text-secondary" href="#">日本</a>
+                  </li>
+                  <li class="d-none d-lg-block font-weight-light text-secondary">
+                    &verbar;
+                  </li>
+                  <li class="px-lg-2 px-1">
+                    <a class="text-secondary" href="#">Pakistan </a>
+                  </li>
+                  <li class="d-none d-lg-block font-weight-light text-secondary">
+                    &verbar;
+                  </li>
+                  <li class="px-lg-2 px-1">
+                    <a class="text-secondary" href="#">Polska</a>
+                  </li>
+                  <li class="d-none d-lg-block font-weight-light text-secondary">
+                    &verbar;
+                  </li>
+                  <li class="px-lg-2 px-1">
+                    <a class="text-secondary" href="#">România</a>
+                  </li>
+                  <li class="d-none d-lg-block font-weight-light text-secondary">
+                    &verbar;
+                  </li>
+                </ul>
+              </div>
+              <ul class="menu text-wrap d-flex justify-content-start flex-wrap m-0">
+                <li class="px-lg-2 px-1">
+                  <a class="text-secondary" href="#">About Us</a>
+                </li>
+                <li class="d-none d-lg-block font-weight-light text-secondary px-lg-2 px-0 px-lg-1">
+                  &verbar;
+                </li>
+                <li class="px-lg-2 px-1">
+                  <a class="text-secondary" href="#">Corrections</a>
+                </li>
+                <li class="d-none d-lg-block font-weight-light text-secondary px-lg-2 px-0 px-lg-1">
+                  &verbar;
+                </li>
+                <li class="px-lg-2 px-1">
+                  <a class="text-secondary" href="#">Contact Us</a>
+                </li>
+                <li class="d-none d-lg-block font-weight-light text-secondary px-lg-2 px-0 px-lg-1">
+                  &verbar;
+                </li>
+                <li class="px-lg-2 px-1">
+                  <a class="text-secondary" href="#">Editorial Guidelines</a>
+                </li>
+                <li class="d-none d-lg-block font-weight-light text-secondary px-lg-2 px-0 px-lg-1">
+                  &verbar;
+                </li>
+                <li class="px-lg-2 px-1">
+                  <a class="text-secondary" href="#">Advertise</a>
+                </li>
+                <li class="d-none d-lg-block font-weight-light text-secondary px-lg-2 px-0 px-lg-1">
+                  &verbar;
+                </li>
+                <li class="px-lg-2 px-1">
+                  <a class="text-secondary" href="#">Copyright</a>
+                </li>
+                <li class="d-none d-lg-block font-weight-light text-secondary px-lg-2 px-0 px-lg-1">
+                  &verbar;
+                </li>
+                <li class="px-lg-2 px-1">
+                  <a class="text-secondary" href="#">Terms & Conditions</a>
+                </li>
+                <li class="d-none d-lg-block font-weight-light text-secondary px-lg-2 px-0 px-lg-1">
+                  &verbar;
+                </li>
+                <li class="px-lg-2 px-1">
+                  <a class="text-secondary" href="#">Pxivacy Policy</a>
+                </li>
+                <li class="d-none d-lg-block font-weight-light text-secondary px-lg-2 px-0 px-lg-1">
+                  &verbar;
+                </li>
+                <li class="px-lg-2 px-1">
+                  <a class="text-secondary" href="#">Cookie Policy</a>
+                </li>
+                <li class="d-none d-lg-block font-weight-light text-secondary px-lg-2 px-0 px-lg-1">
+                  &verbar;
+                </li>
+                <li class="px-lg-2 px-1">
+                  <a class="text-secondary" href="#">Terms of Sale</a>
+                </li>
+                <li class="d-none d-lg-block font-weight-light text-secondary px-lg-2 px-0 px-lg-1">
+                  &verbar;
+                </li>
+                <li class="px-lg-2 px-1">
+                  <a class="text-secondary" href="#">Archive</a>
+                </li>
+                <li class="d-none d-lg-block font-weight-light text-secondary px-lg-2 px-0 px-lg-1">
+                  &verbar;
+                </li>
+                <li class="px-lg-2 px-1">
+                  <a class="text-secondary" href="#">Announcements</a>
+                </li>
+                <li class="d-none d-lg-block font-weight-light text-secondary px-lg-2 px-0 px-lg-1">
+                  &verbar;
+                </li>
+                <li class="px-lg-2 px-1">
+                  <a class="text-secondary" href="#">Consent preferences</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+
 </html>
